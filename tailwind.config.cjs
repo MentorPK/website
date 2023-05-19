@@ -6,7 +6,9 @@ const config = {
 ],
 
 	theme: {
-		extend: {}
+		extend: {
+			
+		}
 	},
 
 	plugins: [ require('flowbite/plugin')
