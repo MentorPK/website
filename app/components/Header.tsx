@@ -3,14 +3,14 @@ const bannerStyle = {
   background: `url(${banner})`,
 };
 
-const Banner = () => {
+const Header = () => {
   return (
     <div className="h-80 flex" style={bannerStyle}>
-      <p className="text-center text-white m-auto">
-        HERE WILL BE SOME GREAT BANNER TEXT AND BANNER{' '}
+      <p className="text-center text-6xl text-white m-auto">
+        webpaw solutions{' '}
       </p>
     </div>
   );
 };
 
-export default Banner;
+export default Header;
