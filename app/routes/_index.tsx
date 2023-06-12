@@ -1,5 +1,6 @@
 import type { V2_MetaFunction } from '@remix-run/node';
 import About from '~/components/About';
+import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import Projects from '~/components/Projects';
@@ -12,14 +13,10 @@ export default function Index() {
   return (
     <div>
       <Header />
-      <div className="flex flex-col container md:mx-auto">
-        <div>
-          <About />
-        </div>
-        <div>
-          <Projects />
-        </div>
-      </div>
+      <Container>
+        <About />
+        <Projects />
+      </Container>
       <div className="sticky top-[100vh]">
         <Footer />
       </div>
