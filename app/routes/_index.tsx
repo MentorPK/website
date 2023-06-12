@@ -4,6 +4,11 @@ import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import Projects from '~/components/Projects';
+import bg from '../images/bg.jpg';
+const background = {
+  background: `url(${bg})`,
+  backgroundSize: 'cover',
+};
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'webpaw solutions e.U.' }];
@@ -11,7 +16,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
+    <div style={background}>
       <Header />
       <Container>
         <About />

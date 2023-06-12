@@ -5,9 +5,9 @@ const Projects = () => {
       <div className="border-2">
         <div className="flex flex-row items-center justify-between">
           <h2 className="text-4xl">XRPL.Agency LLC</h2>
-          <div>2022</div>
+          <div className="text-xl">2022</div>
         </div>
-        <p>
+        <p className="text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -17,16 +17,16 @@ const Projects = () => {
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
-      <div className="border-2">
+      <div className="border-2 back bg-teal-500/75">
         <div className="flex flex-row items-center justify-between">
           <h2 className="text-4xl">ecosio GmbH</h2>
-          <div>2017 - 2022</div>
+          <div className="text-xl">2017 - 2022</div>
         </div>
-        <p className="">
+        <p className="text-xl">
           During my first year of college I had the opportunity to work at
           ecosio. This was my first IT job. For the first 6 months I started as
-          a website admin and switched after to the Frontend department. I
-          started to build
+          a website admin and switched after to the Frontend department. My
+          general task were
         </p>
       </div>
     </div>
