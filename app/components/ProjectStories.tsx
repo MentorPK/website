@@ -8,7 +8,8 @@ const Projects = () => {
           <div className="text-xl">2022</div>
         </div>
         <p className="text-xl">
-          Cryptocurrencies nad blockhain piqued my interesets to join XRPL.Agency to work on https://xrplcoins.com/.
+          Cryptocurrencies and blockhain piqued my interesets to join XRPL.Agency to work on https://xrplcoins.com/. 
+          It was my first project and even job outside of Austria. The 9 hours time difference were sometimes tough but managable ;)
         </p>
       </div>
       <div className="border-2 back bg-teal-500/75">
