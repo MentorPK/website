@@ -3,13 +3,11 @@ const About = () => {
     <div>
       <h1 className="text-5xl font-bold">About</h1>
       <p className="text-xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Greetings traveler! Welcome to "webpaw solutions" my personal freelance website. 
+        It is all about creating web applications and websites for your personal needs. 
+        Doens't matter if you are are a commpany, startup or an individual that is looking for help, 
+        optimization or you want to start a project completely from scratch. 
+        We step in to save your time and stress and deliver a state of the art worthy product.
       </p>
     </div>
   );

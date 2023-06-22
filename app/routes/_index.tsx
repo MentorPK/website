@@ -3,7 +3,7 @@ import About from '~/components/About';
 import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
-import Projects from '~/components/Projects';
+import Projects from '~/components/ProjectStories';
 import bg from '../images/bg.jpg';
 const background = {
   background: `url(${bg})`,
