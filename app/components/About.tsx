@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div>
-      <h1 className="text-5xl font-bold">About</h1>
+      {/*<h1 className="text-5xl font-bold">About</h1>*/}
       <p className="text-xl">
         Greetings traveler! Welcome to "webpaw solutions" my personal freelance website. 
         It is all about creating web applications and websites for your personal needs. 
