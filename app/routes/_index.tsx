@@ -17,7 +17,7 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={background}>
+    <div>
       <Header />
       <Container>
         <About />
