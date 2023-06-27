@@ -1,3 +1,5 @@
+import ecosioLogo from '../images/ecosioLogo.jpg';
+
 const Projects = () => {
   return (
     <div className="px-2">
@@ -8,54 +10,61 @@ const Projects = () => {
             <h2 className="text-4xl">XRPL.Agency LLC</h2>
             <div className="text-xl">2022</div>
           </div>
-          <p className="text-xl py-4">
-            Cryptocurrencies and blockchain piqued my interest, leading me to
-            join XRPL.Agency and work on https://xrplcoins.com/. It was my first
-            project and job outside of Austria. The 9 hours time difference were
-            sometimes tough but managable. XRPL Coins is a community-driven
-            marketplace with the main goal of making the XRPL Ledger more
-            accessible to everyone. They offer all-in-one solutions for projects
-            and participants who interact with XRPL. My tasks at XRPL Coins
-            involved refactoring the project, such as restructuring directories,
-            simplifying components, removing duplicate code, and creating more
-            reusable components for a smoother workflow. Additionally, I
-            implemented a new design and created new features. One of the
-            exciting features was adding a social platform to their existing
-            marketplace. It was an interesting and unique idea to differentiate
-            from their competitors, and I had a lot of fun implementing it. This
-            included creating user profiles, customizable settings, a social
-            page where users could interact with each other, and a live chat
-            reminiscent of Twitch streaming chat. It was definitely a cool
-            addition to a crypto trading platform.
-          </p>
+          <div className="flex flex-row py-4 grid-cols-2">
+            <p className="text-xl">
+              Cryptocurrencies and blockchain piqued my interest, leading me to
+              join XRPL.Agency and work on https://xrplcoins.com/. It was my
+              first project and job outside of Austria. The 9 hours time
+              difference were sometimes tough but managable. XRPL Coins is a
+              community-driven marketplace with the main goal of making the XRPL
+              Ledger more accessible to everyone. They offer all-in-one
+              solutions for projects and participants who interact with XRPL. My
+              tasks at XRPL Coins involved refactoring the project, such as
+              restructuring directories, simplifying components, removing
+              duplicate code, and creating more reusable components for a
+              smoother workflow. Additionally, I implemented a new design and
+              created new features. One of the exciting features was adding a
+              social platform to their existing marketplace. It was an
+              interesting and unique idea to differentiate from their
+              competitors, and I had a lot of fun implementing it. This included
+              creating user profiles, customizable settings, a social page where
+              users could interact with each other, and a live chat reminiscent
+              of Twitch streaming chat. It was definitely a cool addition to a
+              crypto trading platform.
+            </p>
+          </div>
         </div>
         <div className="my-4 px-4 shadow-box">
           <div className="flex flex-row items-center justify-between py-4">
             <h2 className="text-4xl">ecosio GmbH</h2>
             <div className="text-xl">2017 - 2022</div>
           </div>
-          <p className="text-xl py-4">
-            I had the privilege of working at ecosio GmbH, where we offered
-            exceptional EDI and e-invoicing software solutions as a service. My
-            journey with ecosio began in 2017, initially with simple tasks like
-            adding content and enhancing the visual appeal of their website. It
-            was an enjoyable experience as I had the freedom to express my
-            creativity since no designer was involved at the time. Infusing the
-            website with my personal touch was always fun. As time went on, I
-            became a valuable member of the frontend team, contributing to the
-            development of their first supplier relationship management tool.
-            However, the most exciting project I worked on was the creation of
-            the EDI monitor tool, which boasted captivating animated graphs. I
-            take great pride in having developed this tool, as it effectively
-            visualizes all EDI traffic for their customers. As my
-            responsibilities grew, I found myself involved in additional tasks
-            such as maintaining internal React component libraries, building a
-            theme switch tool for our customers, and implementing a localization
-            tool. ecosio not only provided me with my first job as a developer,
-            but also offered me a platform to learn and grow. I am immensely
-            grateful for the years I spent at ecosio, as they have played a
-            pivotal role in shaping my career as a developer.
-          </p>
+          <div className="flex-col py-4 items-center grid 2xl:grid-cols-2">
+            <img src={ecosioLogo} className="rounded-lg" alt="ecosioPicture" />
+            <p className="text-xl pl-4">
+              I had the privilege of working at ecosio GmbH, where we offered
+              exceptional EDI and e-invoicing software solutions as a service.
+              My journey with ecosio began in 2017, initially with simple tasks
+              like adding content and enhancing the visual appeal of their
+              website. It was an enjoyable experience as I had the freedom to
+              express my creativity since no designer was involved at the time.
+              Infusing the website with my personal touch was always fun. As
+              time went on, I became a valuable member of the frontend team,
+              contributing to the development of their first supplier
+              relationship management tool. However, the most exciting project I
+              worked on was the creation of the EDI monitor tool, which boasted
+              captivating animated graphs. I take great pride in having
+              developed this tool, as it effectively visualizes all EDI traffic
+              for their customers. As my responsibilities grew, I found myself
+              involved in additional tasks such as maintaining internal React
+              component libraries, building a theme switch tool for our
+              customers, and implementing a localization tool. ecosio not only
+              provided me with my first job as a developer, but also offered me
+              a platform to learn and grow. I am immensely grateful for the
+              years I spent at ecosio, as they have played a pivotal role in
+              shaping my career as a developer.
+            </p>
+          </div>
         </div>
       </div>
     </div>
