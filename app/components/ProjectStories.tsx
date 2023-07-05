@@ -1,18 +1,16 @@
 import ecosioLogo from '../images/ecosioLogo.jpg';
+import PSBox from './ProjectStoryBox';
 
 const Projects = () => {
   return (
     <div className="px-2">
       <h1 className="text-5xl font-bold py-4">Project Stories</h1>
       <div className="">
-        <div className="my-4 px-4 shadow-box">
-          <div className="flex flex-row items-center justify-between py-4">
-            <h2 className="text-4xl">XRPL.Agency LLC</h2>
-            <div className="text-xl">2022</div>
-          </div>
-          <div className="flex flex-row py-4 grid-cols-2">
-            <p className="text-xl">
-              Cryptocurrencies and blockchain piqued my interest, leading me to
+        <PSBox
+          company="XRPL.Agency LLC"
+          year="2022"
+          logo={''}
+          text="Cryptocurrencies and blockchain piqued my interest, leading me to
               join XRPL.Agency and work on https://xrplcoins.com/. It was my
               first project and job outside of Austria. The 9 hours time
               difference were sometimes tough but managable. XRPL Coins is a
@@ -30,19 +28,13 @@ const Projects = () => {
               creating user profiles, customizable settings, a social page where
               users could interact with each other, and a live chat reminiscent
               of Twitch streaming chat. It was definitely a cool addition to a
-              crypto trading platform.
-            </p>
-          </div>
-        </div>
-        <div className="my-4 px-4 shadow-box">
-          <div className="flex flex-row items-center justify-between py-4">
-            <h2 className="text-4xl">ecosio GmbH</h2>
-            <div className="text-xl">2017 - 2022</div>
-          </div>
-          <div className="flex-col py-4 items-center grid 2xl:grid-cols-2">
-            <img src={ecosioLogo} className="rounded-lg" alt="ecosioPicture" />
-            <p className="text-xl pl-4">
-              I had the privilege of working at ecosio GmbH, where we offered
+              crypto trading platform."
+        />
+        <PSBox
+          company="ecosio GmbH"
+          year="2017-2022"
+          logo={ecosioLogo}
+          text="     I had the privilege of working at ecosio GmbH, where we offered
               exceptional EDI and e-invoicing software solutions as a service.
               My journey with ecosio began in 2017, initially with simple tasks
               like adding content and enhancing the visual appeal of their
@@ -62,10 +54,8 @@ const Projects = () => {
               provided me with my first job as a developer, but also offered me
               a platform to learn and grow. I am immensely grateful for the
               years I spent at ecosio, as they have played a pivotal role in
-              shaping my career as a developer.
-            </p>
-          </div>
-        </div>
+              shaping my career as a developer."
+        />
       </div>
     </div>
   );
