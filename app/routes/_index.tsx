@@ -27,9 +27,6 @@ export default function Index() {
         <Projects />
         <Outlet />
       </Container>
-      <div className="sticky top-[100vh]">
-        <Footer />
-      </div>
     </div>
   );
 }

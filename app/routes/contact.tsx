@@ -12,8 +12,8 @@ export const action = async ({ request }: ActionArgs) => {
     new URLSearchParams(await request.text())
   );
   //TODO: proper validation
-  if (formObject.name && formObject.email && formObject.message === null) {
-    return;
+  if (!formObject.name && !formObject.email && !formObject.message) {
+    return null;
   }
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const myMail: string = process.env.MY_EMAIL!;
@@ -32,7 +32,10 @@ export const action = async ({ request }: ActionArgs) => {
 
 export default function ContactForm() {
   return (
-    <div className="bg-secondary text-slate-200">
+    <div
+      className="bg-secondary text-slate-300"
+      style={{ height: 'calc(100vh - 88px)' }}
+    >
       <Container>
         <Form method="post" className="w-full">
           <div className="flex flex-col gap-4">

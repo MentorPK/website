@@ -5,7 +5,7 @@ const Team = () => {
     <div className="px-2 flex justify-center flex-col items-center">
       <h1 className="text-5xl font-bold py-4">Team</h1>
       <img
-        className="border-4 rounded-full h-60 w-60"
+        className="border-4 border-primary rounded-full h-60 w-60"
         src={pawelImg}
         alt="Pawel Kowalski"
       />
