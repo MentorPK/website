@@ -4,8 +4,9 @@ import {
   faGitlabSquare,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
-
 import banner from '../images/banner.png';
+import { Link } from '@remix-run/react';
+
 const bannerStyle = {
   background: `url(${banner})`,
 };
@@ -14,7 +15,7 @@ const Footer = () => {
     <div style={bannerStyle} className="text-white">
       <div className="flex flex-col justify-center items-center py-8">
         <div className="col-span-2">
-          If you want to contact me? Just text me!
+          If you want to contact me? <a href="/contact">Just text me!</a>
         </div>
         <div className="flex gap-3">
           <a
