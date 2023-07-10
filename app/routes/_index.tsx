@@ -1,26 +1,42 @@
 import type { V2_MetaFunction } from '@remix-run/node';
 import About from '~/components/About';
 import Container from '~/components/Container';
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
+import Banner from '~/components/Banner';
 import Projects from '~/components/ProjectStories';
-import bg from '../images/bg.jpg';
 import Team from '~/components/Team';
 import { Outlet } from '@remix-run/react';
-
-const background = {
-  background: `url(${bg})`,
-  backgroundSize: 'cover',
-};
+import { useState, useRef, useEffect } from 'react';
+import Header from '~/components/Header';
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'webpaw solutions e.U.' }];
 };
 
 export default function Index() {
+  const ref = useRef(null);
+  const [pos, setPos] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollPosition = window.scrollY;
+      setPos(scrollPosition);
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="bg-secondary text-slate-300">
-      <Header />
+      <div ref={ref}>
+        <Banner />
+      </div>
+
+      <div
+        className={`h-20 w-full bg-red-500 sticky top-0 mb-1 transition duration-500 ease-in-out ${
+          pos > 300 ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <Header />
+      </div>
       <Container>
         <About />
         <Team />

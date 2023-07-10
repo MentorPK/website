@@ -5,7 +5,7 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import banner from '../images/banner.png';
-import { Link } from '@remix-run/react';
+//import { Link } from '@remix-run/react';
 
 const bannerStyle = {
   background: `url(${banner})`,

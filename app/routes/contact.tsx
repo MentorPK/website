@@ -37,6 +37,9 @@ export default function ContactForm() {
       style={{ height: 'calc(100vh - 88px)' }}
     >
       <Container>
+        <div className="self-start">
+          Hey, if you want to get in touch in me just write me here a message!
+        </div>
         <Form method="post" className="w-full">
           <div className="flex flex-col gap-4">
             <Input

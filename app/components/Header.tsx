@@ -1,12 +1,11 @@
-import banner from '../images/banner.png';
-const bannerStyle = {
-  background: `url(${banner})`,
-};
+import { Link } from '@remix-run/react';
 
 const Header = () => {
   return (
-    <div className="h-80 flex" style={bannerStyle}>
-      <p className="text-center text-7xl text-white m-auto">webpaw solutions</p>
+    <div className="flex gap-7 justify-center">
+      <Link to="#1">WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT</Link>
+      <div id="2">wat</div>
+      <div id="3">dat</div>
     </div>
   );
 };

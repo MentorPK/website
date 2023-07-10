@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div className="px-2">
       <h1 className="text-5xl font-bold py-4">Project Stories</h1>
-      <div className="">
+      <div className="" id="1">
         <PSBox
           company="XRPL.Agency LLC"
           year="2022"
