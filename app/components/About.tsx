@@ -1,11 +1,6 @@
-import MenuIcon from './MenuIcon';
-
 const About = () => {
   return (
     <div>
-      <div className="h-5 w-5 flex">
-        <MenuIcon />
-      </div>
       <p className="text-2xl py-16 px-4 italic text-center">
         Greetings traveler! Welcome to "webpaw solutions". We are all about
         creating web applications and websites for your personal needs. Doens't

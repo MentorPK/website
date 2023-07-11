@@ -1,11 +1,20 @@
 import { useState } from 'react';
-const MenuIcon = () => {
+
+interface FancyPantsyMenuButton {
+  active: boolean;
+  addStyle: string;
+}
+
+const FancyPantsyMenuButton = ({ active, addStyle }: FancyPantsyMenuButton) => {
   const [clicked, setClicked] = useState(false);
   return (
-    <div className="h-5 w-5">
+    <div
+      className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle spin ${addStyle}`}
+    >
       <button
         className={`tcon-menu ${clicked ? 'active' : ''}`}
         onClick={() => setClicked(!clicked)}
+        disabled={!active}
       >
         <span className={`bars ${clicked ? 'active' : ''}`}>
           <i className={`bar ${clicked ? 'active' : ''}`} />
@@ -17,4 +26,4 @@ const MenuIcon = () => {
     </div>
   );
 };
-export default MenuIcon;
+export default FancyPantsyMenuButton;

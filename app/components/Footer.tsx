@@ -24,7 +24,7 @@ const Footer = () => {
             rel="noreferrer"
             className="transition ease-in-out duration-200 hover:scale-125"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="3x" />
+            <FontAwesomeIcon icon={faLinkedin} className="w-10 h-10" />
           </a>
           <a
             href="https://gitlab.com/m3nt0rpk"
@@ -32,7 +32,7 @@ const Footer = () => {
             rel="noreferrer"
             className="transition ease-in-out duration-200 hover:scale-125"
           >
-            <FontAwesomeIcon icon={faGitlabSquare} size="3x" />
+            <FontAwesomeIcon icon={faGitlabSquare} className="w-10 h-10" />
           </a>
           <a
             href="https://github.com/MentorPK"
@@ -40,7 +40,7 @@ const Footer = () => {
             rel="noreferrer"
             className="transition ease-in-out duration-200 hover:scale-125"
           >
-            <FontAwesomeIcon icon={faGithub} size="3x" />
+            <FontAwesomeIcon icon={faGithub} className="w-10 h-10" />
           </a>
         </div>
       </div>

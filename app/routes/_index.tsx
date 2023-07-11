@@ -29,14 +29,7 @@ export default function Index() {
       <div ref={ref}>
         <Banner />
       </div>
-
-      <div
-        className={`h-20 w-full bg-red-500 sticky top-0 mb-1 transition duration-500 ease-in-out ${
-          pos > 300 ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <Header />
-      </div>
+      <Header pos={pos} />
       <Container>
         <About />
         <Team />
