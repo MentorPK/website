@@ -23,7 +23,6 @@ export default function Index() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
   return (
     <div className="bg-secondary text-slate-300">
       <div ref={ref}>

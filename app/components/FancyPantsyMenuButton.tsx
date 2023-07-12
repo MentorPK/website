@@ -1,15 +1,19 @@
-import { useState } from 'react';
-
 interface FancyPantsyMenuButton {
   active: boolean;
-  addStyle: string;
+  addStyle?: string;
+  clicked: boolean;
+  setClicked: (arg0: boolean) => void;
 }
 
-const FancyPantsyMenuButton = ({ active, addStyle }: FancyPantsyMenuButton) => {
-  const [clicked, setClicked] = useState(false);
+const FancyPantsyMenuButton = ({
+  active,
+  addStyle,
+  clicked,
+  setClicked,
+}: FancyPantsyMenuButton) => {
   return (
     <div
-      className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle spin ${addStyle}`}
+      className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle ${addStyle}`}
     >
       <button
         className={`tcon-menu ${clicked ? 'active' : ''}`}

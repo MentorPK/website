@@ -4,6 +4,9 @@ export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      transitionProperty: {
+        header: 'height, opacity',
+      },
       colors: {
         primary: '#2BB6A8',
         secondary: '#011627',

@@ -10,6 +10,7 @@ import {
 } from '@remix-run/react';
 import stylesheet from '~/tailwind.css';
 import Footer from './components/Footer';
+import FancyPantsyMenuButton from './components/FancyPantsyMenuButton';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
@@ -25,7 +26,8 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <FancyPantsyMenuButton />
+        <Outlet wat={'test'} />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
