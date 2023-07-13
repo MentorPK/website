@@ -3,6 +3,7 @@ import {
   faLinkedin,
   faGitlabSquare,
   faGithub,
+  faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
 import banner from '../images/banner.png';
 //import { Link } from '@remix-run/react';
@@ -11,6 +12,9 @@ const bannerStyle = {
   background: `url(${banner})`,
 };
 const Footer = () => {
+  const copyDiscord = () => {
+    navigator.clipboard.writeText('MentorPK#8447');
+  };
   return (
     <div style={bannerStyle} className="text-white">
       <div className="flex flex-col justify-center items-center py-8">
@@ -42,6 +46,12 @@ const Footer = () => {
           >
             <FontAwesomeIcon icon={faGithub} className="w-10 h-10" />
           </a>
+
+          <FontAwesomeIcon
+            icon={faDiscord}
+            className="w-10 h-10 transition ease-in-out duration-200 hover:scale-125 cursor-pointer"
+            onClick={copyDiscord}
+          />
         </div>
       </div>
     </div>

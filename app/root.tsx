@@ -22,7 +22,6 @@ export const links: LinksFunction = () => [
 export default function App() {
   const [clicked, setClicked] = useState(false);
   const pos = useScrollPosition();
-  const active = pos > 300 ? true : false;
   return (
     <html lang="en">
       <head>
@@ -33,7 +32,7 @@ export default function App() {
       </head>
       <body>
         <FancyPantsyMenuButton
-          active={active}
+          pos={pos}
           addStyle={'ml-20'}
           clicked={clicked}
           setClicked={setClicked}

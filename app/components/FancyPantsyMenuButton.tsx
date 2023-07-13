@@ -1,20 +1,27 @@
+import { useEffect } from 'react';
+
 interface FancyPantsyMenuButton {
-  active: boolean;
+  pos: number;
   addStyle?: string;
   clicked: boolean;
   setClicked: (arg0: boolean) => void;
 }
 
 const FancyPantsyMenuButton = ({
-  active,
-  addStyle,
+  pos,
   clicked,
+  addStyle,
   setClicked,
 }: FancyPantsyMenuButton) => {
+  const active = pos > 300 ? true : false;
+  const inactive = pos < 100 ? true : false;
+  useEffect(() => {
+    inactive && setClicked(false);
+  });
   return (
     <div
       className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle fixed z-10 transition duration-200 ${addStyle} ${
-        active ? 'opacity-100' : 'opacity-0'
+        active ? 'opacity-100' : inactive ? 'opacity-0' : ''
       }`}
     >
       <button
