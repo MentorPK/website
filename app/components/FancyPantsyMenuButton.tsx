@@ -13,7 +13,9 @@ const FancyPantsyMenuButton = ({
 }: FancyPantsyMenuButton) => {
   return (
     <div
-      className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle ${addStyle}`}
+      className={`circle border-4 h-14 w-14 border-white rounded-full flex m-2 items-center circle fixed z-10 transition duration-200 ${addStyle} ${
+        active ? 'opacity-100' : 'opacity-0'
+      }`}
     >
       <button
         className={`tcon-menu ${clicked ? 'active' : ''}`}
