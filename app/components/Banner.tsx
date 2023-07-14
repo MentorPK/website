@@ -1,6 +1,5 @@
-import banner from '../images/banner.png';
 const bannerStyle = {
-  background: `url(${banner})`,
+  backgroundColor: 'black',
 };
 
 const Banner = () => {

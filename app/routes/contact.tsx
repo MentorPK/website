@@ -5,6 +5,7 @@ import { Form } from '@remix-run/react';
 import Container from '~/components/Container';
 import Input from '~/components/Inputs';
 import Button from '~/components/Button';
+import Footer from '~/components/Footer';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const action = async ({ request }: ActionArgs) => {
@@ -32,10 +33,7 @@ export const action = async ({ request }: ActionArgs) => {
 
 export default function ContactForm() {
   return (
-    <div
-      className="bg-secondary text-slate-300"
-      style={{ height: 'calc(100vh - 88px)' }}
-    >
+    <div className="flex flex-col justify-between min-h-screen">
       <Container>
         <div className="self-start">
           Hey, if you want to get in touch in me just write me here a message!
@@ -66,6 +64,7 @@ export default function ContactForm() {
           </div>
         </Form>
       </Container>
+      <Footer />
     </div>
   );
 }

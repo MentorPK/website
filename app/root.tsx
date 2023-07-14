@@ -31,20 +31,19 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <FancyPantsyMenuButton
-          pos={pos}
-          addStyle={'ml-20'}
-          clicked={clicked}
-          setClicked={setClicked}
-        />
-        <Header clicked={clicked} />
-        <Outlet />
+        <div className="bg-secondary text-slate-300 min-h-screen">
+          <FancyPantsyMenuButton
+            pos={pos}
+            addStyle={'ml-20'}
+            clicked={clicked}
+            setClicked={setClicked}
+          />
+          <Header clicked={clicked} />
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <div className="sticky top-[100vh]">
-          <Footer />
-        </div>
       </body>
     </html>
   );

@@ -8,9 +8,12 @@ export default {
         header: 'height, opacity',
       },
       colors: {
-        primary: '#2BB6A8',
-        secondary: '#011627',
-        tertiary: '#FAF3DD',
+        primary: '#00E0D5',
+        primaryMaybe: '#00F5E9',
+        secondary: '#021627',
+        secondaryMaybe: '#0F110C',
+        tertiary: '#F7ECCA',
+        errorRed: '#ED254E',
       },
       boxShadow: {
         box: '0 2px 2.5em 0 rgba(1,1,2,.28)',
