@@ -37,7 +37,7 @@ export default function App() {
             clicked={clicked}
             setClicked={setClicked}
           />
-          <Header clicked={clicked} />
+          <Header clicked={clicked} sticky />
           <Outlet />
         </div>
         <ScrollRestoration />

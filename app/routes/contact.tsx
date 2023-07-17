@@ -64,7 +64,7 @@ export default function ContactForm() {
           </div>
         </Form>
       </Container>
-      <Footer />
+      <Footer addStyles="mt-[calc(100vh-768px)]" />
     </div>
   );
 }

@@ -11,7 +11,7 @@ import footer from '../images/footer300.svg';
 const footerStyle = {
   backgroundImage: `url(${footer})`,
   width: '100%',
-  height: '300px',
+  height: '250px',
 };
 
 interface Footer {
@@ -24,7 +24,7 @@ const Footer = ({ addStyles }: Footer) => {
   };
   return (
     <div className={`text-white ${addStyles}`} style={footerStyle}>
-      <div className="flex flex-col justify-center items-center py-8">
+      <div className="flex flex-col justify-center items-center py-10">
         <div className="col-span-2 py-2 text-lg">
           If you want to contact me? <a href="/contact">Just mail me!</a>
         </div>

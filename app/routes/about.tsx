@@ -1,11 +1,13 @@
 import Container from '~/components/Container';
 import Footer from '~/components/Footer';
+import Header from '~/components/Header';
 
 const About = ({}) => {
   return (
-    <div className="flex flex-col justify-between min-h-screen pt-8">
+    <div className="flex flex-col min-h-screen">
+      <Header clicked sticky={false} />
       <Container>
-        <div className="text-xl self-start my-8">About Me</div>
+        <div className="text-xl self-start my-4">About Me</div>
         <div>
           Hi, I'm Pawel, a passionate Frontend Developer based in Vienna,
           Austria. Through the foundation of "webpaw solutions" I set out to
@@ -42,7 +44,7 @@ const About = ({}) => {
           <br />
         </div>
       </Container>
-      <Footer />
+      <Footer addStyles="mt-[calc(100vh-768px)]" />
     </div>
   );
 };
