@@ -9,7 +9,6 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import stylesheet from '~/tailwind.css';
-import Footer from './components/Footer';
 import useScrollPosition from './hooks/useScrollPosition';
 import { useState } from 'react';
 import Header from './components/Header';

@@ -11,7 +11,7 @@ export default {
         primary: '#00E0D5',
         primaryMaybe: '#00F5E9',
         secondary: '#021627',
-        secondaryMaybe: '#0F110C',
+        richBlack: '#010B13',
         tertiary: '#F7ECCA',
         errorRed: '#ED254E',
       },

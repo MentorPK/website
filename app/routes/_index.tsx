@@ -1,5 +1,5 @@
 import type { V2_MetaFunction } from '@remix-run/node';
-import About from '~/components/About';
+import Intro from '~/components/Intro';
 import Banner from '~/components/Banner';
 import Projects from '~/components/ProjectStories';
 import Team from '~/components/Team';
@@ -17,7 +17,7 @@ export default function Index() {
       <div ref={ref}>
         <Banner />
       </div>
-      <About />
+      <Intro />
       <Projects />
       <Team />
       <Footer />

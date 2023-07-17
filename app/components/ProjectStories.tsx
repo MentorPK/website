@@ -1,5 +1,6 @@
 import { ecosioText, xrplAgencyText } from '~/texts/projectTexts';
 import ecosioLogo from '../images/ecosioLogo.jpg';
+import xrplAgencyLogo from '../images/xrplAgencyLogo.png';
 import PSBox from './ProjectStoryBox';
 import Container from './Container';
 
@@ -16,7 +17,7 @@ const Projects = () => {
           <PSBox
             company="XRPL.Agency LLC"
             year="2022"
-            logo={''}
+            logo={xrplAgencyLogo}
             text={strShortener(xrplAgencyText)}
           />
           <PSBox

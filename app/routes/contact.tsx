@@ -33,7 +33,7 @@ export const action = async ({ request }: ActionArgs) => {
 
 export default function ContactForm() {
   return (
-    <div className="flex flex-col justify-between min-h-screen">
+    <div className="flex flex-col justify-between min-h-screen pt-10">
       <Container>
         <div className="self-start">
           Hey, if you want to get in touch in me just write me here a message!
