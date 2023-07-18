@@ -30,7 +30,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="bg-secondary text-slate-300 min-h-screen">
+        <div className="text-slate-300 min-h-screen">
           <FancyPantsyMenuButton
             pos={pos}
             addStyle={'ml-20'}

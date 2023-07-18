@@ -6,6 +6,7 @@ export default {
     extend: {
       transitionProperty: {
         header: 'height, opacity',
+        textLink: 'text-decoration-line, color',
       },
       colors: {
         primary: '#00E0D5',

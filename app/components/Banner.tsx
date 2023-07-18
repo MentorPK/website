@@ -1,7 +1,7 @@
 import webpawLogo from '../images/webpawLogo.png';
 import webpawFont from '../images/webpawFont.png';
 import solutionsFont from '../images/solutionsFont.png';
-
+import { HeaderMenuItems } from './Header';
 //Font design from https://www.fontspace.com/4-brain-font-f52281
 const Banner = () => {
   return (
@@ -15,6 +15,7 @@ const Banner = () => {
         <img src={webpawFont} alt="webpaw font" className="h-[42px]" />
         <img src={solutionsFont} alt="solutions font" className="h-[42px]" />
       </div>
+      <HeaderMenuItems addStyles={`absolute top-[12px] md:right-40`} />
     </div>
   );
 };

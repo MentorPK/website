@@ -119,3 +119,31 @@ body {
     transition-delay: 0.25s;
   }
 }
+
+.headerMenuItem {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  position: relative;
+}
+.headerMenuItem:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: #00e0d5;
+  transition: width 0.25s ease 0s, left 0.25s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}

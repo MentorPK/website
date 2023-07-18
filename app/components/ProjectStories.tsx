@@ -10,8 +10,8 @@ const strShortener = (str: string) => {
 
 const Projects = () => {
   return (
-    <Container>
-      <div className="px-2 py-24">
+    <Container addStyles="bg-opacity-95 bg-secondary">
+      <div className="px-2 py-24 ">
         <h1 className="text-5xl font-bold py-4">Project Stories</h1>
         <div className="" id="1">
           <PSBox

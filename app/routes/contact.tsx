@@ -8,7 +8,9 @@ import Button from '~/components/Button';
 import Footer from '~/components/Footer';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-const resend = new Resend(process.env.RESEND_API_KEY);
+import Header from '~/components/Header';
+import { useEffect, useState } from 'react';
+import useLocalStorage from '~/hooks/useLocalStorage';
 const validateName = (name: string) => {
   if (!name) {
     return 'Please provide a Name.';
@@ -29,20 +31,21 @@ const validateEmail = (email: string) => {
 const validateMessage = (message: string) => {
   if (!message) {
     return 'Please provide a message.';
-  } else if (typeof message !== 'string' || message.length < 3) {
+  } else if (typeof message !== 'string' || message.length < 10) {
     return 'Message must be at least 10 characters long';
   }
 };
 
 export const action = async ({ request }: ActionArgs) => {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const fields = Object.fromEntries(new URLSearchParams(await request.text()));
-
   const errors = {
     name: validateName(fields.name),
     email: validateEmail(fields.email),
     message: validateMessage(fields.message),
   };
   if (Object.values(errors).some(Boolean)) {
+    window.localStorage.setItem('loading', JSON.stringify(false));
     return { errors, fields };
   }
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -60,10 +63,12 @@ export const action = async ({ request }: ActionArgs) => {
   }
 };
 
-export default function ContactForm() {
+const Contact = () => {
   const actionData = useActionData();
+
   return (
-    <div className="flex flex-col justify-between min-h-screen pt-10">
+    <div className="flex flex-col justify-between min-h-screen bg-secondary">
+      <Header clicked sticky={false} />
       <Container>
         <div className="self-start">
           Hey, if you want to get in touch in me just write me here a message!
@@ -104,6 +109,7 @@ export default function ContactForm() {
                   className="w-10 h-10 text-successGreen transition ease-in duration-200"
                 />
               )}
+              {loading && <div>KURWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>}
             </div>
           </div>
         </Form>
@@ -111,4 +117,6 @@ export default function ContactForm() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Contact;
