@@ -11,7 +11,7 @@ import footer from '../images/footer300.svg';
 const footerStyle = {
   backgroundImage: `url(${footer})`,
   width: '100%',
-  height: '250px',
+  height: '240px',
 };
 
 interface Footer {

@@ -44,7 +44,7 @@ const About = ({}) => {
           <br />
         </div>
       </Container>
-      <Footer addStyles="mt-[calc(100vh-768px)]" />
+      <Footer />
     </div>
   );
 };
