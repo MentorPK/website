@@ -43,7 +43,6 @@ export const action = async ({ request }: ActionArgs) => {
     message: validateMessage(fields.message),
   };
   if (Object.values(errors).some(Boolean)) {
-    window.localStorage.setItem('loading', JSON.stringify(false));
     return { errors, fields };
   }
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
