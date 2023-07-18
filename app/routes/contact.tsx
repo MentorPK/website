@@ -9,8 +9,6 @@ import Footer from '~/components/Footer';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
-import { useEffect, useState } from 'react';
-import useLocalStorage from '~/hooks/useLocalStorage';
 const validateName = (name: string) => {
   if (!name) {
     return 'Please provide a Name.';
@@ -109,7 +107,6 @@ const Contact = () => {
                   className="w-10 h-10 text-successGreen transition ease-in duration-200"
                 />
               )}
-              {loading && <div>KURWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>}
             </div>
           </div>
         </Form>
