@@ -2,7 +2,7 @@ import type { V2_MetaFunction } from '@remix-run/node';
 import Intro from '~/components/Intro';
 import Banner from '~/components/Banner';
 import Projects from '~/components/ProjectStories';
-import Team from '~/components/Team';
+import About from '~/components/About';
 import { useRef } from 'react';
 import Footer from '~/components/Footer';
 
@@ -19,7 +19,7 @@ export default function Index() {
       </div>
       <Intro />
       <Projects />
-      <Team />
+      <About />
       <Footer />
     </div>
   );
