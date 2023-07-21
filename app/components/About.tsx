@@ -5,7 +5,7 @@ const Team = () => {
   return (
     <Container addStyles="bg-secondary">
       <div className="p-4 pb-24 flex justify-center flex-col items-center">
-        <h1 className="text-5xl font-bold py-4">Team</h1>
+        <h1 className="text-5xl font-bold py-4">About</h1>
         <img
           className="border-4 border-primary rounded-full h-60 w-60"
           src={pawelImg}

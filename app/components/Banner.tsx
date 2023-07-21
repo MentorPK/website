@@ -6,6 +6,7 @@ import { HeaderMenuItems } from './Header';
 const Banner = () => {
   return (
     <div className="h-[340px] md:h-[350px] flex md:flex-row flex-col md:gap-8 gap-2 justify-center items-center bg-richBlack">
+      <HeaderMenuItems addStyles={`absolute top-[12px] md:right-40 `} />
       <img
         src={webpawLogo}
         alt="webpaw logo"
@@ -15,7 +16,6 @@ const Banner = () => {
         <img src={webpawFont} alt="webpaw font" className="h-[42px]" />
         <img src={solutionsFont} alt="solutions font" className="h-[42px]" />
       </div>
-      <HeaderMenuItems addStyles={`absolute top-[12px] md:right-40`} />
     </div>
   );
 };

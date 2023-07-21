@@ -5,6 +5,7 @@ interface FancyPantsyMenuButton {
   addStyle?: string;
   clicked: boolean;
   setClicked: (arg0: boolean) => void;
+  bPos?: number;
 }
 
 const FancyPantsyMenuButton = ({
@@ -12,9 +13,10 @@ const FancyPantsyMenuButton = ({
   clicked,
   addStyle,
   setClicked,
+  bPos = 0,
 }: FancyPantsyMenuButton) => {
-  const active = pos > 300 ? true : false;
-  const inactive = pos < 100 ? true : false;
+  const active = pos > bPos ? true : false;
+  const inactive = pos < bPos ? true : false;
   useEffect(() => {
     inactive && setClicked(false);
   });

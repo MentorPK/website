@@ -3,24 +3,35 @@ import Intro from '~/components/Intro';
 import Banner from '~/components/Banner';
 import Projects from '~/components/ProjectStories';
 import About from '~/components/About';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Footer from '~/components/Footer';
+import Header from '~/components/Header';
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'webpaw solutions e.U.' }];
 };
+export const handle = {
+  breadcrumb: () => 'parent',
+};
 
 export default function Index() {
+  const [bannerPosition, setBannerPosition] = useState(0);
   const ref = useRef(null);
+  useEffect(() => {
+    const scroll = ref.current.offsetTop;
+    setBannerPosition(scroll);
+  }, [bannerPosition]);
   return (
-    <div>
+    <>
+      <Header bPos={bannerPosition} />
+      <Banner />
       <div ref={ref}>
-        <Banner />
+        <Intro />
       </div>
-      <Intro />
+
       <Projects />
       <About />
       <Footer />
-    </div>
+    </>
   );
 }

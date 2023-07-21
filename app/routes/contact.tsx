@@ -64,51 +64,53 @@ const Contact = () => {
   const actionData = useActionData();
 
   return (
-    <div className="flex flex-col justify-between min-h-screen bg-secondary">
-      <Header clicked sticky={false} />
+    <div className="flex flex-col justify-between min-h-screen bg-secondary w-full ">
+      <Header />
       <Container>
-        <div className="self-start">
-          Hey, if you want to get in touch in me just write me here a message!
-        </div>
-        <Form method="post" className="w-full">
-          <div className="flex flex-col gap-4">
-            <Input
-              name="name"
-              type="text"
-              label="Name"
-              placeholder="John Wick"
-              error={actionData?.errors?.name}
-              defaultValue={actionData?.fields?.name}
-            />
-            <Input
-              name="email"
-              type="text"
-              label="Email"
-              placeholder="john.wick@continental.com"
-              error={actionData?.errors?.email}
-              defaultValue={actionData?.fields?.email}
-            />
-            <Input
-              name="message"
-              type="textarea"
-              label="Message"
-              placeholder="Write me your desire!"
-              error={actionData?.errors?.message}
-              defaultValue={actionData?.fields?.message}
-            />
-            <div className="flex justify-center items-center gap-4">
-              <Button type="submit" design="self-center">
-                Submit
-              </Button>
-              {actionData?.id && (
-                <FontAwesomeIcon
-                  icon={faCircleCheck}
-                  className="w-10 h-10 text-successGreen transition ease-in duration-200"
-                />
-              )}
-            </div>
+        <div className="my-12 mx-2">
+          <div className="self-start">
+            Hey, if you want to get in touch in me just write me a message!
           </div>
-        </Form>
+          <Form method="post" className="w-full">
+            <div className="flex flex-col gap-4">
+              <Input
+                name="name"
+                type="text"
+                label="Name"
+                placeholder="John Wick"
+                error={actionData?.errors?.name}
+                defaultValue={actionData?.fields?.name}
+              />
+              <Input
+                name="email"
+                type="text"
+                label="Email"
+                placeholder="john.wick@continental.com"
+                error={actionData?.errors?.email}
+                defaultValue={actionData?.fields?.email}
+              />
+              <Input
+                name="message"
+                type="textarea"
+                label="Message"
+                placeholder="Write me your desire!"
+                error={actionData?.errors?.message}
+                defaultValue={actionData?.fields?.message}
+              />
+              <div className="flex justify-center items-center gap-4">
+                <Button type="submit" design="self-center">
+                  Submit
+                </Button>
+                {actionData?.id && (
+                  <FontAwesomeIcon
+                    icon={faCircleCheck}
+                    className="w-10 h-10 text-successGreen transition ease-in duration-200"
+                  />
+                )}
+              </div>
+            </div>
+          </Form>
+        </div>
       </Container>
       <Footer />
     </div>

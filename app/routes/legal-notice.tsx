@@ -5,9 +5,9 @@ import Header from '~/components/Header';
 const LegalNotice = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-secondary">
-      <Header clicked sticky={false} />
+      <Header />
       <Container>
-        <div className="my-12">
+        <div className="my-12 mx-2">
           <div className="text-4xl text-primary font-bold my-4">
             Legal Notice
           </div>
@@ -80,7 +80,6 @@ const LegalNotice = () => {
             All brands and logos mentioned or displayed on this website belong
             to their respective owners.
           </div>
-
           <ul>
             <div className="text-2xl my-6">
               Photography / Designs / Graphics:
