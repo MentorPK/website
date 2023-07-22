@@ -1,16 +1,19 @@
+import { Link } from '@remix-run/react';
 import pawelImg from '../images/pawel.jpeg';
 import Container from './Container';
 
 const Team = () => {
   return (
     <Container addStyles="bg-secondary">
-      <div className="p-4 pb-24 flex justify-center flex-col items-center">
-        <h1 className="text-5xl font-bold py-4">About</h1>
-        <img
-          className="border-4 border-primary rounded-full h-60 w-60"
-          src={pawelImg}
-          alt="Pawel Kowalski"
-        />
+      <div className="my-20 mx-2 flex justify-center flex-col items-center">
+        <h1 className="text-5xl font-bold pb-8">About</h1>
+        <Link to="/about" className="py-4">
+          <img
+            className="border-4 border-primary rounded-full max-h-60 max-w-60 transition duration-200 ease-in-out hover:scale-[110%]"
+            src={pawelImg}
+            alt="Pawel Kowalski"
+          />
+        </Link>
         <p className="text-xl py-4">
           Hi, I'm Pawel Kowalski founder of "webpaw solutions e.U.". Currently a
           one man army at webpaw solution. I started my developer journey during

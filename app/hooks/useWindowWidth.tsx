@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// Get Scrollposition!!!
 const useWindowWidth = (size: boolean) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const MOBILE_WIDTH = 768;

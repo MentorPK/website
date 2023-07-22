@@ -31,7 +31,7 @@ const MenuButton = ({
   });
   return (
     <div
-      className={`fixed z-10 top-[14px] md:left-10 right-2 ${
+      className={`fixed z-[40] top-[14px] md:left-10 right-2 ${
         active ? 'opacity-100' : inactive ? 'opacity-0' : ''
       }`}
     >
@@ -54,7 +54,7 @@ interface HeaderMenuItems {
 export const HeaderMenuItems = ({ addStyles }: HeaderMenuItems) => {
   return (
     <div
-      className={`flex justify-end lg:gap-10 md:gap-4 sm:gap-4 gap-2 ${addStyles}`}
+      className={`flex justify-end z-10 lg:gap-10 md:gap-4 sm:gap-4 gap-2 ${addStyles}`}
     >
       <Link className="headerMenuItem" to="/about">
         About
@@ -75,15 +75,16 @@ interface HeaderInterface {
 
 // gradient heaqder color bg-gradient-to-r from-black from-0% via-transparent via-50% to-primary to-100%
 const Header = ({ bPos = 0 }: HeaderInterface) => {
-  const [clicked, setClicked] = useState(true);
+  const [clicked, setClicked] = useState(false);
   const matchRoot = useMatches()[1].pathname === '/' ? true : false;
   const pos = useScrollPosition();
+  const isMobile = useWindowWidth(true);
   return (
     <>
       <div
         className={`w-full bg-richBlack ${
-          matchRoot ? 'fixed' : 'sticky'
-        } top-0 transition-header duration-250 ease-in-out z-10
+          !matchRoot ? 'sticky' : isMobile ? 'absolute' : 'fixed'
+        } top-0 transition-header duration-250 ease-in-out z-20
       }  shadow-xl ${clicked ? 'opacity-100 h-[64px]' : 'opacity-0 h-0'}`}
       >
         <div className="flex justify-between h-full items-center text-white lg:mx-40 md:mx-16 sm:mx-2 mx-2">

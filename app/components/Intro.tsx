@@ -9,7 +9,7 @@ const Intro = () => {
   return (
     <div style={introStyles} className="bg-secondary">
       <Container>
-        <div className="text-2xl p-4 my-24 italic text-center">
+        <div className="text-2xl p-4 my-24 mx-2 italic text-center">
           Greetings traveler! Welcome to "webpaw solutions". We are all about
           creating web applications and websites for your personal needs.
           Doens't matter if you are are a commpany, startup or an individual

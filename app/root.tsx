@@ -1,5 +1,5 @@
 //import { cssBundleHref } from '@remix-run/css-bundle';
-import type { LinksFunction, LoaderFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -9,25 +9,12 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import stylesheet from '~/tailwind.css';
-import { RootContext } from './context';
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
 ];
 
-/* export const loader: LoaderFunction = async () => {
-  return json({
-    width: innerWidth,
-  });
-};
- */
-const hasWindow = () => {
-  return typeof window !== 'undefined';
-};
-
 export default function App() {
-  const window = hasWindow() ? 'browser' : 'server';
-  console.log(window);
   return (
     <html lang="en">
       <head>

@@ -6,6 +6,7 @@ import About from '~/components/About';
 import { useEffect, useRef, useState } from 'react';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
+import Tech from '~/components/Tech';
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'webpaw solutions e.U.' }];
@@ -16,7 +17,7 @@ export const handle = {
 
 export default function Index() {
   const [bannerPosition, setBannerPosition] = useState(0);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const scroll = ref.current.offsetTop;
     setBannerPosition(scroll);
@@ -31,6 +32,7 @@ export default function Index() {
 
       <Projects />
       <About />
+      <Tech />
       <Footer />
     </>
   );

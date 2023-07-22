@@ -3,7 +3,8 @@
     "remix.env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/hooks/useDarkMode.tsx"
+    "app/hooks/useDarkMode.tsx",
+    "app/hooks/useLocalStorage.jsx"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
