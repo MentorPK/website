@@ -1,9 +1,12 @@
 import { ecosioText, xrplAgencyText } from '~/texts/projectTexts';
-import ecosioBanner from '../images/ecosioBanner.jpg';
+import ecosioBanner from '../images/ecosioBanner.png';
+import xrplBanner from '../images/xrplBanner.png';
 import Container from '~/components/Container';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Divider from '~/components/Divider';
+
+//Banner are fine with 1300:320
 
 interface ProjectStory {
   banner: string;
@@ -33,15 +36,15 @@ const ProjectStories = () => {
           <div className="text-5xl font-bold my-8">Project Stories</div>
           <Divider />
           <ProjectStory
-            banner={ecosioBanner}
-            company={'ecosio GmbH'}
-            text={ecosioText}
+            banner={xrplBanner}
+            company={'XRPL.Agency LLC'}
+            text={xrplAgencyText}
           />
           <Divider />
           <ProjectStory
             banner={ecosioBanner}
-            company={'XRPL.Agency LLC'}
-            text={xrplAgencyText}
+            company={'ecosio GmbH'}
+            text={ecosioText}
           />
         </div>
       </Container>
