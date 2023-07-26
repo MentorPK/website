@@ -148,6 +148,10 @@ body {
   position: relative;
 }
 
+.primary {
+  color: #00e0d5;
+}
+
 .link:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;

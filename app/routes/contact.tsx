@@ -62,7 +62,6 @@ export const action = async ({ request }: ActionArgs) => {
 
 const Contact = () => {
   const actionData = useActionData();
-
   return (
     <div className="flex flex-col justify-between min-h-screen bg-secondary w-full ">
       <Header />

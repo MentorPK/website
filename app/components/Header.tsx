@@ -23,10 +23,10 @@ const MenuButton = ({
   setClicked,
   bPos = 350,
 }: FancyPantsyMenuButton) => {
-  const active = pos > bPos - 40 ? true : false;
+  const active = pos > bPos - 40;
   useEffect(() => {
     !active && setClicked(false);
-  });
+  }, [active, setClicked]);
   return (
     <div
       className={`fixed top-[14px] w-10 h-10 md:left-10 right-2 z-10 ${
@@ -34,11 +34,19 @@ const MenuButton = ({
       }`}
     >
       {!clicked ? (
-        <button onClick={() => setClicked(!clicked)} disabled={!active}>
+        <button
+          onClick={() => setClicked(!clicked)}
+          disabled={!active}
+          aria-label="Open menu button"
+        >
           <FontAwesomeIcon icon={faBars} className="w-10 h-10 text-white" />
         </button>
       ) : (
-        <button onClick={() => setClicked(!clicked)} disabled={!active}>
+        <button
+          onClick={() => setClicked(!clicked)}
+          disabled={!active}
+          arial-label="Close menu button"
+        >
           <FontAwesomeIcon icon={faXmark} className="w-10 h-10 text-white" />
         </button>
       )}
@@ -74,16 +82,15 @@ interface HeaderInterface {
 // gradient heaqder color bg-gradient-to-r from-black from-0% via-transparent via-50% to-primary to-100%
 const Header = ({ bPos = 0 }: HeaderInterface) => {
   const [clicked, setClicked] = useState(false);
-  const matchRoot = useMatches()[1].pathname === '/' ? true : false;
+  const matchRoot = useMatches()[1].pathname === '/';
   const pos = useScrollPosition();
-  const isMobile = useWindowWidth(true);
-  console.log(isMobile, 'LOG');
+  //const isMobile = useWindowWidth(true);
   return (
     <>
       <div
         className={`w-full bg-richBlack ${
           !matchRoot ? 'sticky' : 'fixed'
-        } top-0 transition-header duration-250 ease-in-out
+        } top-0 transition-header duration-250 ease-in-out z-10
       }  shadow-xl ${
         clicked || !matchRoot ? 'opacity-100 h-[64px]' : 'opacity-0 h-0'
       }`}
