@@ -16,13 +16,13 @@ interface ProjectStory {
 const ProjectStory = ({ banner, company, text }: ProjectStory) => {
   return (
     <div>
-      <h2 className="text-4xl break-all py-4">{company}</h2>
+      <h2 className="text-4xl break-all py-4 mx-2">{company}</h2>
       <img
         src={banner}
         className="rounded-lg max-w-full py-4"
         alt={`${company}-img`}
       />
-      <p className="text-xl py-4">{text}</p>
+      <p className="text-xl py-4 mx-2">{text}</p>
     </div>
   );
 };
@@ -33,7 +33,7 @@ const ProjectStories = () => {
       <Header />
       <Container>
         <div className="mb-20">
-          <div className="text-5xl font-bold my-8">Project Stories</div>
+          <div className="text-5xl font-bold my-8 mx-2">Project Stories</div>
           <Divider />
           <ProjectStory
             banner={xrplBanner}
