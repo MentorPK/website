@@ -51,7 +51,7 @@ export const action = async ({ request }: ActionArgs) => {
     const data = await resend.emails.send({
       from: `${fields.name} <onboardingt@resend.dev>`,
       to: [myMail],
-      subject: `${fields.email} webpaw solution contact`,
+      subject: `${fields.email} webpaw solutions contact`,
       html: `<div><div><strong>Contact from: ${fields.email}</strong></div><p>${fields.message}</p></div>`,
     });
     return json(data, 200);

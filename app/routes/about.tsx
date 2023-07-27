@@ -24,10 +24,11 @@ const About = () => {
             <br />
             <br />
             My path as a developer began with my studies of Information and
-            Telecommunication Systems at FH Technikum Vienna. During my second
-            semester, I started as a frontend developer at "ecosio" 🧑‍💻 where I
-            honed my skills and acquired valuable experiences. After 3 years, I
-            graduated in 2019 with a BSc degree 🎓 .
+            Telecommunication Systems at University of Applied Sciences Vienna.
+            During my second semester, I started as a frontend developer at
+            "ecosio" 🧑‍💻 where I honed my skills and acquired valuable
+            experiences. After 3 years, I graduated in 2019 with a BSc degree 🎓
+            .
             <br />
             <br />
             One of the aspects I enjoy most about being a frontend developer is
