@@ -5,6 +5,7 @@ interface ButtonInterface {
   children: ReactNode;
   fullWidth?: boolean;
   design: string;
+  disabled: boolean;
   onClick?: () => void;
 }
 
@@ -13,14 +14,20 @@ const Button = ({
   fullWidth,
   children,
   design,
+  disabled,
   onClick,
 }: ButtonInterface) => {
   return (
     <button
       type={type}
-      className={`px-4 py-2 rounded-lg text-black font-semibold bg-primary ${
+      disabled={disabled}
+      className={`px-4 py-2 rounded-lg  font-semibold border-2 ${
+        disabled
+          ? 'bg-slate-500 border-slate-500 border-slate-500'
+          : 'text-primary hover:bg-primary hover:text-secondary bg-secondary  border-primary'
+      } ${
         fullWidth ? 'w-full' : 'w-28'
-      } min-w-min transitio-all duration-200 ease-in-out hover:scale-110 ${design}`}
+      } min-w-min transitio-all duration-200 ease-in-out ${design}`}
       onClick={onClick}
     >
       {children}
