@@ -1,6 +1,11 @@
 import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
+import type { V2_MetaFunction } from '@remix-run/node';
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: 'Privacy Policy | webpaw solutions e.U.' }];
+};
 
 const PrivacyPolicy = () => {
   return (
