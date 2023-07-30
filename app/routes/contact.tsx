@@ -1,7 +1,7 @@
 import { json } from '@remix-run/node';
 import { Resend } from 'resend';
 import type { ActionArgs } from '@remix-run/node';
-import { Form, useActionData } from '@remix-run/react';
+import { Form, Link, useActionData } from '@remix-run/react';
 import Container from '~/components/Container';
 import Input from '~/components/Inputs';
 import Button from '~/components/Button';
@@ -9,6 +9,8 @@ import Footer from '~/components/Footer';
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
+import Checkbox from '~/components/Checkbox';
+import { useState } from 'react';
 const validateName = (name: string) => {
   if (!name) {
     return 'Please provide a Name.';
@@ -62,6 +64,18 @@ export const action = async ({ request }: ActionArgs) => {
 
 const Contact = () => {
   const actionData = useActionData();
+  const [checked, setChecked] = useState(false);
+  const checkboxLabel = () => {
+    return (
+      <div>
+        I have read and agree to the{' '}
+        <Link to="/privacy-policy" className="link text-primary">
+          privacy policy
+        </Link>{' '}
+        guidelines.
+      </div>
+    );
+  };
   return (
     <div className="flex flex-col justify-between min-h-screen bg-secondary w-full ">
       <Header />
@@ -96,8 +110,9 @@ const Contact = () => {
                 error={actionData?.errors?.message}
                 defaultValue={actionData?.fields?.message}
               />
+              <Checkbox label={checkboxLabel()} setChecked={setChecked} />
               <div className="flex justify-center items-center gap-4">
-                <Button type="submit" design="self-center">
+                <Button type="submit" design="self-center" disabled={!checked}>
                   Submit
                 </Button>
                 {actionData?.id && (

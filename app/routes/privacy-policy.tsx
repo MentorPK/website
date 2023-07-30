@@ -40,10 +40,7 @@ const PrivacyPolicy = () => {
               </li>
               <li>
                 <span className="font-semibold">Legal Notice: </span>
-                <a
-                  className="link text-primary"
-                  href="https://web-paw.com/legal-notice"
-                >
+                <a className="link text-primary" href="/legal-notice">
                   https://web-paw.com/legal-notice
                 </a>
               </li>
@@ -158,7 +155,7 @@ const PrivacyPolicy = () => {
             conducted in accordance with § 6 Article 1b (contract) and/or § 6
             Article 1a (consent) of GDPR.
           </div>
-          <div className="my-6 text-2xl">Process of Personal Data Transfer</div>
+          <div className="my-6 text-2xl">Services in use</div>
           <div>
             Hosting: <div>Netlify (Netlify Inc)</div>
             <div>44 Montgomery Street, Suite 300 San Francisco, CA, USA</div>
@@ -184,9 +181,50 @@ const PrivacyPolicy = () => {
               Privacy Policy
             </a>
             <div>
-              Resend provides an API that is connected to the contact form and
-              forwards all entered data to our contact mail
+              Resend provides an Application Programming Interface (API) that is
+              connected to the contact form and forwards all entered data to our
+              contact mail.
             </div>
+          </div>
+          <br />
+          <div>
+            Mail Hosting: <div>Google Workplace (Google Ireland Limited)</div>
+            <div>Gordon House, Barrow Street Dublin 4 Ireland</div>
+            <a
+              href="https://policies.google.com/privacy?hl=en"
+              target="_blank"
+              rel="noreferrer"
+              className="link text-primary"
+            >
+              Privacy Policy
+            </a>
+            <div>
+              We utilize Google Workspace's email services to store data
+              associated with our website, including emails and other
+              communication data sent via our contact forms. Google Workspace
+              ensures secure and efficient data storage and management.
+            </div>
+          </div>
+          <div className="my-6 text-2xl">Your rights</div>
+          <div>
+            You have the right to request information about stored data and to
+            have data corrected, or deleted. You may restrict the usage of data
+            and may have it transferred to other parties. You have the right to
+            revoke any given consent. Please send any request to the email
+            address pawel@web-paw.com. If you believe that the processing of
+            your data violates data protection law or that your data protection
+            claims have otherwise been violated, you may file a complaint with
+            the supervisory authority. In Austria, that would be the
+            “Datenschutzbehörde”{' '}
+            <a
+              href="https://www.dsb.gv.at"
+              target="_blank"
+              rel="noreferrer"
+              className="link text-primary"
+            >
+              https://www.dsb.gv.at
+            </a>
+            .
           </div>
         </div>
       </Container>

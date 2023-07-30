@@ -80,11 +80,11 @@ const Footer = ({ addStyles }: Footer) => {
             Privacy Policy
           </Link>
         </div>
-        <div>
+        {/*         <div>
           <Link className="link" to="/terms-and-conditions">
             Terms and conditions{' '}
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
