@@ -2,6 +2,11 @@ import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import pawelImg from '../images/pawel.jpeg';
+import type { V2_MetaFunction } from '@remix-run/node';
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: 'About | webpaw solutions e.U.' }];
+};
 
 const About = () => {
   return (

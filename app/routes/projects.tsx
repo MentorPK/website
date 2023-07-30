@@ -5,6 +5,11 @@ import Container from '~/components/Container';
 import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Divider from '~/components/Divider';
+import type { V2_MetaFunction } from '@remix-run/node';
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: 'Project Stories | webpaw solutions e.U.' }];
+};
 
 //Banner are fine with 1300:320
 

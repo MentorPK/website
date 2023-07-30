@@ -1,6 +1,6 @@
 import { json } from '@remix-run/node';
 import { Resend } from 'resend';
-import type { ActionArgs } from '@remix-run/node';
+import type { ActionArgs, V2_MetaFunction } from '@remix-run/node';
 import { Form, Link, useActionData } from '@remix-run/react';
 import Container from '~/components/Container';
 import Input from '~/components/Inputs';
@@ -11,6 +11,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
 import Checkbox from '~/components/Checkbox';
 import { useState } from 'react';
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: 'Contact | webpaw solutions e.U.' }];
+};
+
 const validateName = (name: string) => {
   if (!name) {
     return 'Please provide a Name.';

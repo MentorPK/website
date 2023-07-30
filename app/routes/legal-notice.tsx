@@ -2,6 +2,12 @@ import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 
+import type { V2_MetaFunction } from '@remix-run/node';
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: 'Legal Notice | webpaw solutions e.U.' }];
+};
+
 const LegalNotice = () => {
   return (
     <div className="flex flex-col justify-between min-h-screen bg-secondary">
