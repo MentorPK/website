@@ -15,7 +15,7 @@ interface PSBox {
 }
 const PSBox = ({ company, year, logo, text }: PSBox) => {
   return (
-    <div className="shadow-box flex flex-col xs:py-8 py-4 xs:px-8 px-4 my-8 overflow-hidden text-ellipsis bg-secondary rounded-2xl">
+    <div className="shadow-box flex flex-col xs:py-8 py-4 xs:px-8 px-4 overflow-hidden text-ellipsis bg-secondary rounded-2xl">
       <div className="flex flex-row justify-between items-center">
         <h2 className="text-4xl break-all">{company}</h2>
         <div className="text-xl">{year}</div>
@@ -72,10 +72,12 @@ const setFragmentsAsLinks = (
 
 const Projects = () => {
   return (
-    <Container addStyles="bg-opacity-95 bg-secondary">
+    <Container addStyles="bg-secondary95">
       <div className="mx-0 xs:mx-2 my-20 ">
-        <h1 className="text-5xl font-bold py-4 text-center">Project Stories</h1>
-        <div className="">
+        <h1 className="text-5xl font-bold pb-16 text-center">
+          Project Stories
+        </h1>
+        <div className="flex flex-col gap-8">
           <PSBox
             company="XRPL.Agency LLC"
             year="2022"
