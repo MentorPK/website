@@ -4,7 +4,7 @@ import Header from '~/components/Header';
 import type { V2_MetaFunction } from '@remix-run/node';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Privacy Policy | webpaw solutions e.U.' }];
+  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
 };
 
 const PrivacyPolicy = () => {
@@ -109,7 +109,7 @@ const PrivacyPolicy = () => {
           </div>
           <div>
             <div>Here's why hosting is necessary for your website:</div>
-            <ul>
+            <ul className="list-disc ml-[20px]">
               <li>
                 Storage of Website Files: Hosting provides the storage space
                 required to keep all the files and data that make up your
@@ -172,6 +172,29 @@ const PrivacyPolicy = () => {
             >
               Privacy Policy
             </a>
+          </div>
+          <br />
+          <div>
+            Icons: <div>Font Awesome (Fonticons, Inc.)</div>
+            <div>307 S. Main St., Suite 202, Bentonville, AR 72712, USA</div>
+            <div>
+              Please visit{' '}
+              <a
+                href="https://fontawesome.com/privacy"
+                target="_blank"
+                rel="noreferrer"
+                className="link text-primary"
+              >
+                privacy policy{' '}
+              </a>
+              to see which data is collected and why.
+            </div>
+            <div>
+              We employ Font Awesome icons on our website to improve navigation
+              and create a user-friendly interface. These visually appealing
+              icons make it easier for users to explore and find information
+              efficiently, enhancing the overall user experience.
+            </div>
           </div>
           <br />
           <div>

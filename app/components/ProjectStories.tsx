@@ -12,8 +12,9 @@ interface PSBox {
   year: string;
   logo: string;
   text: string[];
+  id: string;
 }
-const PSBox = ({ company, year, logo, text }: PSBox) => {
+const PSBox = ({ company, year, logo, text, id }: PSBox) => {
   return (
     <div className="shadow-box flex flex-col xs:py-8 py-4 xs:px-8 px-4 overflow-hidden text-ellipsis bg-secondary rounded-2xl">
       <div className="flex flex-row justify-between items-center">
@@ -22,7 +23,7 @@ const PSBox = ({ company, year, logo, text }: PSBox) => {
       </div>
       <Divider />
       <div className="grid flex-row gap-8 pt-4 2xl:grid-cols-2">
-        <Link to="/projects">
+        <Link to={`/projects#${id}`}>
           <img
             src={logo}
             className="rounded-xl border-primary border-1"
@@ -31,7 +32,10 @@ const PSBox = ({ company, year, logo, text }: PSBox) => {
         </Link>
         <div className="text-xl">
           <div dangerouslySetInnerHTML={{ __html: text }} />
-          <Link to="/projects" className="link text-primary text-center">
+          <Link
+            to={`/projects#${id}`}
+            className="link text-primary text-center"
+          >
             ... read full story
           </Link>
         </div>
@@ -55,14 +59,13 @@ const setUrlsAsLinks = (text: string) => {
   });
 }; */
 
-const setFragmentsAsLinks = (
+export const setFragmentsAsLinks = (
   text: string,
   anchorContent: Array<string>,
   href: Array<string>
 ) => {
-  const shortStr = strShortener(text);
   return anchorContent.map((el) => {
-    return shortStr.replace(
+    return text.replace(
       el,
       `<a href="${href}" class="link primary" target="_blank" rel="noreferrer"
     >${el}</a>`
@@ -83,20 +86,22 @@ const Projects = () => {
             year="2022"
             logo={xrplAgencyLogo}
             text={setFragmentsAsLinks(
-              xrplAgencyText,
+              strShortener(xrplAgencyText),
               ['https://xrplcoins.com/'],
               ['https://xrplcoins.com/']
             )}
+            id="xrpl"
           />
           <PSBox
             company="ecosio GmbH"
             year="2017-2022"
             logo={ecosioLogo}
             text={setFragmentsAsLinks(
-              ecosioText,
+              strShortener(ecosioText),
               ['ecosio GmbH'],
               ['https://ecosio.com/en/']
             )}
+            id="ecosio"
           />
         </div>
       </div>

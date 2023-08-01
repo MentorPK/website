@@ -9,7 +9,13 @@ import Header from '~/components/Header';
 import Tech from '~/components/Tech';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Home | webpaw solutions e.U.' }];
+  return [
+    {
+      title: 'Home | webpaw solutions e.U.',
+      description:
+        'We create web applications and websites for your personal needs.',
+    },
+  ];
 };
 export const handle = {
   breadcrumb: () => 'parent',

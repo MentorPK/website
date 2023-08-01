@@ -6,9 +6,10 @@ import Header from '~/components/Header';
 import Footer from '~/components/Footer';
 import Divider from '~/components/Divider';
 import type { V2_MetaFunction } from '@remix-run/node';
+import { setFragmentsAsLinks } from '~/components/ProjectStories';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Project Stories | webpaw solutions e.U.' }];
+  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
 };
 
 //Banner are fine with 1300:320
@@ -16,18 +17,22 @@ export const meta: V2_MetaFunction = () => {
 interface ProjectStory {
   banner: string;
   company: string;
-  text: string;
+  text: string[];
+  id: string;
 }
-const ProjectStory = ({ banner, company, text }: ProjectStory) => {
+const ProjectStory = ({ banner, company, text, id }: ProjectStory) => {
   return (
-    <div>
+    <div id={id}>
       <h2 className="text-4xl break-all py-4 mx-2">{company}</h2>
       <img
         src={banner}
         className="rounded-lg max-w-full py-4"
         alt={`${company}-img`}
       />
-      <p className="text-xl py-4 mx-2">{text}</p>
+      <div
+        className="text-xl py-4 mx-2"
+        dangerouslySetInnerHTML={{ __html: text }}
+      />
     </div>
   );
 };
@@ -43,13 +48,23 @@ const ProjectStories = () => {
           <ProjectStory
             banner={xrplBanner}
             company={'XRPL.Agency LLC'}
-            text={xrplAgencyText}
+            text={setFragmentsAsLinks(
+              xrplAgencyText,
+              ['https://xrplcoins.com/'],
+              ['https://xrplcoins.com/']
+            )}
+            id="xrpl"
           />
           <Divider />
           <ProjectStory
             banner={ecosioBanner}
             company={'ecosio GmbH'}
-            text={ecosioText}
+            text={setFragmentsAsLinks(
+              ecosioText,
+              ['ecosio GmbH'],
+              ['https://ecosio.com/en/']
+            )}
+            id="ecosio"
           />
         </div>
       </Container>
