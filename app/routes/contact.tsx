@@ -13,7 +13,7 @@ import Checkbox from '~/components/Checkbox';
 import { useState } from 'react';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Contact | webpaw solutions e.U.' }];
+  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
 };
 
 const validateName = (name: string) => {

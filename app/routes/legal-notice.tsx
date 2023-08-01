@@ -4,7 +4,7 @@ import Header from '~/components/Header';
 import type { V2_MetaFunction } from '@remix-run/node';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Legal Notice | webpaw solutions e.U.' }];
+  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
 };
 
 const LegalNotice = () => {

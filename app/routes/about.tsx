@@ -5,7 +5,12 @@ import pawelImg from '../images/pawel.jpeg';
 import type { V2_MetaFunction } from '@remix-run/node';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'About | webpaw solutions e.U.' }];
+  return [
+    {
+      title: 'About | webpaw solutions e.U.',
+      description: '',
+    },
+  ];
 };
 
 const About = () => {
@@ -22,9 +27,9 @@ const About = () => {
           <div className="inline-block xl:min-h-[16px] xl:min-w-[2px] min-w-[16px] min-h-[2px] bg-primary my-4 rounded-full" />
           <div>
             <div className="text-xl self-start my-4">About Me</div>
-            Hi, I'm Pawel, a passionate Frontend Developer 💻 based in Vienna,
-            Austria with polish roots. Through the foundation of "webpaw
-            solutions" I set out to fulfill myself professionally and
+            Hi, I'm Pawel, a passionate Web Application Developer 💻 with polish
+            roots based in Vienna, Austria. Through the foundation of "webpaw
+            solutions e.U." I set out to fulfill myself professionally and
             creatively.
             <br />
             <br />

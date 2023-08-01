@@ -17,14 +17,21 @@ const Team = () => {
               />
             </Link>
             <div className="text-xl py-4">
-              Hi, I'm Pawel Kowalski founder of "webpaw solutions e.U.".
-              Currently a one man army at webpaw solutions. I started my
-              developer journey during my first year of college on University of
-              Applied Sciences Vienna where i also graduated in "Information and
-              Communication Systems". After one year in college I had the
-              opportunity to work at ecosio and start my career in IT. In 2017
-              for the first 6 months I started as a website admin and switched
-              after to the frontend department until 2022.
+              Hi, I'm Pawel, a passionate Web Application Developer with polish
+              roots based in Vienna, Austria. Through the foundation of "webpaw
+              solutions e.U." I set out to fulfill myself professionally and
+              creatively.
+              <br />
+              My path as a developer began with my studies of Information and
+              Telecommunication Systems at University of Applied Sciences
+              Vienna. During my second semester, I started as a frontend
+              developer at "ecosio" where I honed my skills and acquired
+              valuable experiences. After 3 years, I graduated in 2019 with a
+              BSc degree.
+              <br />
+              <Link to="/about" className="link text-primary text-center">
+                ... read full article
+              </Link>
             </div>
           </div>
         </div>

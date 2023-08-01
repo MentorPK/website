@@ -12,6 +12,7 @@ const footerStyle = {
   backgroundImage: `url(${footer})`,
   width: '100%',
   minHeight: '240px',
+  backgroundSize: '100% 100%',
 };
 
 interface Footer {
@@ -25,13 +26,13 @@ const Footer = ({ addStyles }: Footer) => {
   return (
     <div
       style={footerStyle}
-      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 h-full gap-8 py-6 px-4`}
+      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-full gap-8 py-6 px-4`}
     >
       <div className="align-start justify-self-center order-last md:order-first">
-        Copyright © 2023 webpaw solutions e.U.
+        © 2023 webpaw solutions e.U.
       </div>
       <div className="flex flex-col items-center">
-        <div className="mb-2 text-lg">
+        <div className="mb-2 text-lg text-center">
           If you want to contact me?{' '}
           <a href="/contact" className="link text-primary">
             Just write me here!
@@ -69,7 +70,7 @@ const Footer = ({ addStyles }: Footer) => {
           />
         </div>
       </div>
-      <div className="align-end justify-self-center flex flex-col gap-1 order-first md:order-last">
+      <div className="align-end justify-self-center flex flex-col gap-2 order-first md:order-last text-lg">
         <div>
           <Link className="link" to="/legal-notice">
             Legal Notice
