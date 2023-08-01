@@ -13,6 +13,7 @@ export default {
         primaryMaybe: '#00F5E9',
         //BG
         secondary: '#021627',
+        secondary95: '#0F2232',
         //Dark secondary BG for header and footer
         richBlack: '#010B13',
         tertiary: '#F7ECCA',
