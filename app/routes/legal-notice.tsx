@@ -39,8 +39,14 @@ const LegalNotice = () => {
           </ul>
           <ul>
             <li>
-              <span className="font-semibold">Commercial register number:</span>{' '}
+              <span className="font-semibold">
+                Commercial register number:{' '}
+              </span>
               FN 604297y
+            </li>
+            <li>
+              <span className="font-semibold">Vat number: </span>
+              ATU79643423
             </li>
             <li>
               <span className="font-semibold">Jurisdiction: </span>
