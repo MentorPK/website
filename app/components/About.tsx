@@ -17,13 +17,13 @@ const Team = () => {
               />
             </Link>
             <div className="text-xl py-4">
-              Hi, I'm Pawel, a passionate Web Application Developer with polish
+              Hi, I'm Pawel, a passionate Web Application Developer with Polish
               roots based in Vienna, Austria. Through the foundation of "webpaw
               solutions e.U." I set out to fulfill myself professionally and
               creatively.
               <br />
               My path as a developer began with my studies of Information and
-              Telecommunication Systems at University of Applied Sciences
+              Telecommunication Systems at the University of Applied Sciences
               Vienna. During my second semester, I started as a frontend
               developer at "ecosio" where I honed my skills and acquired
               valuable experiences. After 3 years, I graduated in 2019 with a

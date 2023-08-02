@@ -7,7 +7,6 @@ import useScrollPosition from '~/hooks/useScrollPosition';
 import { useEffect, useState } from 'react';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useWindowWidth from '~/hooks/useWindowWidth';
 
 interface MenuButton {
   pos: number;
@@ -29,7 +28,9 @@ const MenuButton = ({
   }, [active, setClicked]);
   return (
     <div
-      className={`fixed top-[14px] w-10 h-10 md:left-10 right-2 z-10 ${
+      className={`fixed ${
+        !clicked ? 'top-[14px]' : 'md:top-[14px] top-[64px]'
+      } w-10 h-10 md:left-10 right-2 z-10 ${
         active ? 'opacity-100' : 'opacity-0'
       }`}
     >

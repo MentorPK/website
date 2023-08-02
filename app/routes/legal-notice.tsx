@@ -19,7 +19,7 @@ const LegalNotice = () => {
           <ul className="my-4">
             <li className="font-semibold">webpaw solutions e.U.</li>
             <li>Pawel Kowalski</li>
-            <li>Gaswerkstraße 12/3/1</li>
+            <li>Seyringer Straße 1/2/131</li>
             <li>1210 Vienna</li>
             <li>Austria</li>
           </ul>
@@ -39,8 +39,14 @@ const LegalNotice = () => {
           </ul>
           <ul>
             <li>
-              <span className="font-semibold">Commercial register number:</span>{' '}
+              <span className="font-semibold">
+                Commercial register number:{' '}
+              </span>
               FN 604297y
+            </li>
+            <li>
+              <span className="font-semibold">Vat number: </span>
+              ATU79643423
             </li>
             <li>
               <span className="font-semibold">Jurisdiction: </span>
