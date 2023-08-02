@@ -26,16 +26,16 @@ const Footer = ({ addStyles }: Footer) => {
   return (
     <div
       style={footerStyle}
-      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-full gap-8 py-6 px-4`}
+      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-[200px] gap-8 py-6 px-4`}
     >
       <div className="align-start justify-self-center order-last md:order-first">
         © 2023 webpaw solutions e.U.
       </div>
       <div className="flex flex-col items-center">
         <div className="mb-2 text-lg text-center">
-          If you want to contact me?{' '}
+          Want to get in touch?{' '}
           <a href="/contact" className="link text-primary">
-            Just write me here!
+            Message me here!
           </a>
         </div>
         <div className="flex gap-3">

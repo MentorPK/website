@@ -87,7 +87,7 @@ const Contact = () => {
       <Container>
         <div className="my-12 mx-2">
           <div className="self-start">
-            Hey, if you want to get in touch in me just write me a message!
+            Hey, if you want to get in touch with me just write me a message!
           </div>
           <Form method="post" className="w-full">
             <div className="flex flex-col gap-4">

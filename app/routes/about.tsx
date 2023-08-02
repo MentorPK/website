@@ -27,7 +27,7 @@ const About = () => {
           <div className="inline-block xl:min-h-[16px] xl:min-w-[2px] min-w-[16px] min-h-[2px] bg-primary my-4 rounded-full" />
           <div>
             <div className="text-xl self-start my-4">About Me</div>
-            Hi, I'm Pawel, a passionate Web Application Developer 💻 with polish
+            Hi, I'm Pawel, a passionate Web Application Developer 💻 with Polish
             roots based in Vienna, Austria. Through the foundation of "webpaw
             solutions e.U." I set out to fulfill myself professionally and
             creatively.
@@ -58,7 +58,7 @@ const About = () => {
             technology and optimizing performance. I also have a passion for
             cooking 🍲🍙🍔🍟🍕 and experimenting with creative cocktails 🍹. And
             of course, the best part is savoring every bite and sip as it finds
-            its way into my eager stomach🫄.On the other side, spending quality
+            its way into my eager stomach🫄. On the other hand, spending quality
             time with my family is of utmost importance to me. They are a source
             of joy and help me to recharge and appreciate the things that matter
             most.
