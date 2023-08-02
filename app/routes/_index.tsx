@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import Tech from '~/components/Tech';
+import useScrollPosition from '~/hooks/useScrollPosition';
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -22,24 +23,18 @@ export const handle = {
 };
 
 export default function Index() {
-  const [bannerPosition, setBannerPosition] = useState(350);
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const scroll = ref.current.offsetTop;
-    setBannerPosition(scroll);
-  }, [bannerPosition]);
+  const position = useScrollPosition();
+  const transform = position > 0;
   return (
-    <>
-      <Header bPos={bannerPosition} />
+    <div className="bg-richBlack">
       <Banner />
-      <div ref={ref}>
+      <div className={`${transform ? 'mt-[64px]' : 'mt-[350px]'}`}>
         <Intro />
+        <Projects />
+        <About />
+        <Tech />
       </div>
-
-      <Projects />
-      <About />
-      <Tech />
       <Footer />
-    </>
+    </div>
   );
 }

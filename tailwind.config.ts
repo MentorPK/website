@@ -7,6 +7,7 @@ export default {
       transitionProperty: {
         header: 'height, opacity',
         textLink: 'text-decoration-line, color',
+        nHeader: 'max-height, height, opacity, margin-top',
       },
       colors: {
         primary: '#00E0D5',

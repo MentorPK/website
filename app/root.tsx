@@ -24,7 +24,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="text-slate-300 min-h-screen">
+        <div className="text-slate-300 min-h-screen bg-richBlack">
           <Outlet />
         </div>
         <ScrollRestoration />
