@@ -33,7 +33,7 @@ const PrivacyPolicy = () => {
             <ul className="my-4">
               <li className="font-semibold">webpaw solutions e.U.</li>
               <li>Pawel Kowalski</li>
-              <li>Gaswerkstraße 12/3/1</li>
+              <li>Seyringer Straße 1/2/131</li>
               <li>1210 Vienna</li>
               <li>Austria</li>
               <br />
