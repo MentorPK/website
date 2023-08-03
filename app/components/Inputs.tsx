@@ -37,7 +37,7 @@ const Input = ({
         ) : (
           <textarea
             name="message"
-            className={`bg-slate-700 border text-slate-200  ${
+            className={`bg-slate-700 border text-slate-200 h-[160px] ${
               error
                 ? 'border-errorRed focus:ring-errorRed'
                 : 'border-slate-500 focus:ring-primary focus:border-primary hover:border-primary'

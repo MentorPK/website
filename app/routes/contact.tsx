@@ -1,16 +1,20 @@
 import { json } from '@remix-run/node';
 import { Resend } from 'resend';
 import type { ActionArgs, V2_MetaFunction } from '@remix-run/node';
-import { Form, Link, useActionData } from '@remix-run/react';
+import { Form, Link, useActionData, useNavigation } from '@remix-run/react';
 import Container from '~/components/Container';
 import Input from '~/components/Inputs';
 import Button from '~/components/Button';
 import Footer from '~/components/Footer';
-import { faCircleCheck } from '@fortawesome/free-regular-svg-icons';
+import {
+  faCircleCheck,
+  faFaceSadCry,
+} from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
 import Checkbox from '~/components/Checkbox';
 import { useState } from 'react';
+import Loader from '~/components/Loader';
 
 export const meta: V2_MetaFunction = () => {
   return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
@@ -40,7 +44,6 @@ const validateMessage = (message: string) => {
     return 'Message must be at least 10 characters long';
   }
 };
-
 export const action = async ({ request }: ActionArgs) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const fields = Object.fromEntries(new URLSearchParams(await request.text()));
@@ -53,11 +56,10 @@ export const action = async ({ request }: ActionArgs) => {
     return { errors, fields };
   }
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  const myMail: string = process.env.MY_EMAIL!;
   try {
     const data = await resend.emails.send({
-      from: `${fields.name} <onboardingt@resend.dev>`,
-      to: [myMail],
+      from: `${fields.name} <resend@web-paw.com>`,
+      to: ['pawel@web-paw.com'],
       subject: `${fields.email} webpaw solutions contact`,
       html: `<div><div><strong>Contact from: ${fields.email}</strong></div><p>${fields.message}</p></div>`,
     });
@@ -70,6 +72,7 @@ export const action = async ({ request }: ActionArgs) => {
 const Contact = () => {
   const actionData = useActionData();
   const [checked, setChecked] = useState(false);
+  const submit = useNavigation();
   const checkboxLabel = () => {
     return (
       <div>
@@ -85,7 +88,7 @@ const Contact = () => {
     <div className="flex flex-col justify-between min-h-screen bg-secondary w-full ">
       <Header />
       <Container>
-        <div className="my-12 mx-2">
+        <div className="my-12 mx-2 max-w-[600px]">
           <div className="self-start">
             Hey, if you want to get in touch with me just write me a message!
           </div>
@@ -117,15 +120,37 @@ const Contact = () => {
               />
               <Checkbox label={checkboxLabel()} setChecked={setChecked} />
               <div className="flex justify-center items-center gap-4">
-                <Button type="submit" design="self-center" disabled={!checked}>
-                  Submit
-                </Button>
-                {actionData?.id && (
-                  <FontAwesomeIcon
-                    icon={faCircleCheck}
-                    className="w-10 h-10 text-successGreen transition ease-in duration-200"
-                  />
+                {!actionData?.id && submit.state !== 'submitting' && (
+                  <Button
+                    type="submit"
+                    design="self-center"
+                    disabled={!checked}
+                  >
+                    Submit
+                  </Button>
                 )}
+                {actionData?.id && submit.state !== 'submitting' && (
+                  <div className="border-2 border-successGreen rounded-md py-2 px-4 my-2 text-successGreen animate-[shake_1s_ease-in-out_1] flex flex-row justify-between items-center w-full">
+                    Message was sent!{' '}
+                    <FontAwesomeIcon
+                      icon={faCircleCheck}
+                      className="w-8 h-8 ml-2"
+                    />
+                  </div>
+                )}
+              </div>
+              {actionData?.error && (
+                <div className="border-2 border-errorRed rounded-md py-2 px-4 my-2 text-errorRed animate-[shake_1s_ease-in-out_1] flex flex-row justify-between items-center max-w-full">
+                  Message could not be sent. Please contact me directly through
+                  email: pawel@web-paw.com
+                  <FontAwesomeIcon
+                    icon={faFaceSadCry}
+                    className="w-8 h-8 ml-2"
+                  />
+                </div>
+              )}
+              <div className="self-center">
+                {submit.state === 'submitting' ? <Loader dots /> : null}
               </div>
             </div>
           </Form>

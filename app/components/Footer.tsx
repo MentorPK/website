@@ -11,7 +11,7 @@ import { Link } from '@remix-run/react';
 const footerStyle = {
   backgroundImage: `url(${footer})`,
   width: '100%',
-  minHeight: '240px',
+  minHeight: '200px',
   backgroundSize: '100% 100%',
 };
 
