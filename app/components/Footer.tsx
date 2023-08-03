@@ -5,13 +5,12 @@ import {
   faGithub,
   faDiscord,
 } from '@fortawesome/free-brands-svg-icons';
-import footer from '../images/footer300.svg';
+import footer from '../images/footer200.svg';
 import { Link } from '@remix-run/react';
 
 const footerStyle = {
   backgroundImage: `url(${footer})`,
   width: '100%',
-  minHeight: '200px',
   backgroundSize: '100% 100%',
 };
 
@@ -26,7 +25,7 @@ const Footer = ({ addStyles }: Footer) => {
   return (
     <div
       style={footerStyle}
-      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-full gap-8 py-6 px-4`}
+      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-full gap-8 py-6 px-4 md:h-[200px]`}
     >
       <div className="align-start justify-self-center order-last md:order-first">
         © 2023 webpaw solutions e.U.
