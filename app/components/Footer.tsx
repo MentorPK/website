@@ -25,7 +25,7 @@ const Footer = ({ addStyles }: Footer) => {
   return (
     <div
       style={footerStyle}
-      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center h-full gap-8 py-6 px-4 md:h-[200px]`}
+      className={`text-white grid grid-flow-row grid-row-3 md:grid-flow-col md:grid-cols-3 justify-center md:gap-8 gap-4 py-6 px-4 md:h-[200px] h-[280px]`}
     >
       <div className="align-start justify-self-center order-last md:order-first">
         © 2023 webpaw solutions e.U.
