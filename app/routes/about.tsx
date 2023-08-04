@@ -7,8 +7,12 @@ import type { V2_MetaFunction } from '@remix-run/node';
 export const meta: V2_MetaFunction = () => {
   return [
     {
-      title: 'About | webpaw solutions e.U.',
-      description: '',
+      title: 'About | webpaw solutions',
+    },
+    {
+      name: 'description',
+      content:
+        "Hi, I'm Pawel, a passionate Web Application Developer with Polish roots based in Vienna, Austria. Through the foundation of 'webpaw solutions e.U.' I set out to fulfill myself professionally and creatively.",
     },
   ];
 };

@@ -9,7 +9,16 @@ import type { V2_MetaFunction } from '@remix-run/node';
 import { setFragmentsAsLinks } from '~/components/ProjectStories';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
+  return [
+    {
+      title: 'Project Stories | webpaw solutions',
+    },
+    {
+      name: 'description',
+      content:
+        'Welcome to Project Stories! Here, I share my exciting journey through various projects and experiences.',
+    },
+  ];
 };
 
 //Banner are fine with 1300:320

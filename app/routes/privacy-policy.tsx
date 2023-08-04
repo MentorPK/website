@@ -4,7 +4,16 @@ import Header from '~/components/Header';
 import type { V2_MetaFunction } from '@remix-run/node';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
+  return [
+    {
+      title: 'Privacy Policy | webpaw solutions',
+    },
+    {
+      name: 'description',
+      content:
+        'Your privacy matters to us. Our Privacy Policy page explains how we collect, use, and protect your personal information.',
+    },
+  ];
 };
 
 const PrivacyPolicy = () => {

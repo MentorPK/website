@@ -11,14 +11,14 @@ import Tech from '~/components/Tech';
 export const meta: V2_MetaFunction = () => {
   return [
     {
-      title: 'Home | webpaw solutions e.U.',
-      description:
-        'We create web applications and websites for your personal needs.',
+      title: 'webpaw solutions | pawsome apps for your success',
+    },
+    {
+      name: 'description',
+      content:
+        'We create web applications and websites for your personal needs. We step in to save your time, reduce stress while delivering a state of the art worthy product.',
     },
   ];
-};
-export const handle = {
-  breadcrumb: () => 'parent',
 };
 
 export default function Index() {
@@ -35,7 +35,6 @@ export default function Index() {
       <div ref={ref}>
         <Intro />
       </div>
-
       <Projects />
       <About />
       <Tech />
