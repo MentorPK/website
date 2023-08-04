@@ -29,8 +29,10 @@ const Checkbox = ({ label, setChecked }: Checkbox) => {
         className="cursor-pointer appearance-none w-[20px] h-[20px] border-2 border-slate-500 rounded checked:bg-transparent bg-secondary shrink-0 checked:border-primary relative peer hover:border-primary transition-all duration-200 ease-in-out"
         checked={check}
         onChange={(e) => handleChange(e)}
+        id="defaultCheckbox"
       />
       <label
+        htmlFor="defaultCheckbox"
         className={`${
           !check ? 'opacity-70' : 'opacity-100'
         } transition-all duration-200 ease-in-out cursor-pointer`}

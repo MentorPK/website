@@ -17,7 +17,16 @@ import { useState } from 'react';
 import Loader from '~/components/Loader';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
+  return [
+    {
+      title: 'Contact | webpaw solutions',
+    },
+    {
+      name: 'description',
+      content:
+        "Hey there! Let's connect and make amazing things happen. Got questions or ideas? Don't hesitate to reach out through the contact form. Looking forward to hearing from you and bringing your digital dreams to life!",
+    },
+  ];
 };
 
 const validateName = (name: string) => {

@@ -4,7 +4,16 @@ import Header from '~/components/Header';
 import type { V2_MetaFunction } from '@remix-run/node';
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: 'Contact | webpaw solutions e.U.', description: '' }];
+  return [
+    {
+      title: 'Legal Notice | webpaw solutions',
+    },
+    {
+      name: 'description',
+      content:
+        "For full transparency and legal compliance, explore our Imprint page. Here, you'll find all the necessary information about our company's identity, contact details, and legal representatives'",
+    },
+  ];
 };
 
 const LegalNotice = () => {
