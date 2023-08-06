@@ -80,14 +80,57 @@ interface HeaderInterface {
   bPos?: number;
 }
 
+// Hook
+const useScrollProgress = () => {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [scrollProgress, setScrollProgress] = useState(0);
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleScroll() {
+      // Set window width/height to state
+    // This will calculate how many pixels the page is vertically
+    const winScroll = document.documentElement.scrollTop;
+    // This is responsible for subtracticing the total height of the page - where the users page is scrolled to
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    // This will calculate the final total of the percentage of how much the user has scrolled.
+    const scrolled = Math.round((winScroll / height) * 100);
+
+    setScrollProgress(scrolled);    
+  }
+    // Add event listener
+    window.addEventListener("scroll", handleScroll);
+    // Call handler right away so state gets updated with initial window size
+    handleScroll();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []); // Empty array ensures that effect is only run on mount
+  return scrollProgress;
+}
+
+export const Indicator = () => {
+  const scrollProgress = useScrollProgress()
+  return(
+    <div className={`w-full`}>
+      <div className={`h-[2px] w-[${scrollProgress}%] bg-primary`}>
+      </div>
+    </div>
+  )
+}
+
 // gradient heaqder color bg-gradient-to-r from-black from-0% via-transparent via-50% to-primary to-100%
 const Header = ({ bPos = 0 }: HeaderInterface) => {
   const [clicked, setClicked] = useState(false);
   const matchRoot = useMatches()[1].pathname === '/';
   const pos = useScrollPosition();
-  //const isMobile = useWindowWidth(true);
   return (
     <>
+
       <div
         className={`w-full bg-richBlack ${
           !matchRoot ? 'sticky' : 'fixed'
@@ -96,6 +139,8 @@ const Header = ({ bPos = 0 }: HeaderInterface) => {
         clicked || !matchRoot ? 'opacity-100 h-[64px]' : 'opacity-0 h-0'
       }`}
       >
+                  <Indicator />
+
         <div className="flex justify-between h-full items-center text-white lg:mx-40 md:mx-16 sm:mx-2 mx-2">
           <Link to={'/'}>
             <div className="flex flex-row justify-center items-center gap-4">
@@ -120,6 +165,7 @@ const Header = ({ bPos = 0 }: HeaderInterface) => {
           </Link>
           <HeaderMenuItems />
         </div>
+
       </div>
       {/*       {matchRoot && (
         <FancyPantsyMenuButton
@@ -138,6 +184,7 @@ const Header = ({ bPos = 0 }: HeaderInterface) => {
           setClicked={setClicked}
         />
       )}
+
     </>
   );
 };
