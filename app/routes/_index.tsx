@@ -5,7 +5,7 @@ import Projects from '~/components/ProjectStories';
 import About from '~/components/About';
 import { useEffect, useRef, useState } from 'react';
 import Footer from '~/components/Footer';
-import Header from '~/components/Header';
+import Header, { Indicator } from '~/components/Header';
 import Tech from '~/components/Tech';
 
 export const meta: V2_MetaFunction = () => {
@@ -31,6 +31,7 @@ export default function Index() {
   return (
     <>
       <Header bPos={bannerPosition} />
+      <Indicator />
       <Banner />
       <div ref={ref}>
         <Intro />

@@ -12,8 +12,6 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
-import Checkbox from '~/components/Checkbox';
-import { useState } from 'react';
 import Loader from '~/components/Loader';
 
 export const meta: V2_MetaFunction = () => {
@@ -80,26 +78,16 @@ export const action = async ({ request }: ActionArgs) => {
 
 const Contact = () => {
   const actionData = useActionData();
-  const [checked, setChecked] = useState(false);
   const submit = useNavigation();
-  const checkboxLabel = () => {
-    return (
-      <div>
-        I have read and agree to the{' '}
-        <Link to="/privacy-policy" className="link text-primary">
-          privacy policy
-        </Link>{' '}
-        guidelines.
-      </div>
-    );
-  };
+
   return (
     <div className="flex flex-col justify-between min-h-screen bg-secondary w-full ">
       <Header />
       <Container>
         <div className="my-12 mx-2 max-w-[600px]">
-          <div className="self-start">
-            Hey, if you want to get in touch with me just write me a message!
+          <div className="self-start mb-4">
+            Hey, if you want to get in touch with me just write me a message! I
+            will guarantee to get back to you within 48 hours.
           </div>
           <Form method="post" className="w-full">
             <div className="flex flex-col gap-4">
@@ -127,14 +115,16 @@ const Contact = () => {
                 error={actionData?.errors?.message}
                 defaultValue={actionData?.fields?.message}
               />
-              <Checkbox label={checkboxLabel()} setChecked={setChecked} />
+              <div>
+                Here you can find infomations about our{' '}
+                <Link to="/privacy-policy" className="link text-primary">
+                  privacy policy
+                </Link>{' '}
+                guidelines.
+              </div>
               <div className="flex justify-center items-center gap-4">
                 {!actionData?.id && submit.state !== 'submitting' && (
-                  <Button
-                    type="submit"
-                    design="self-center"
-                    disabled={!checked}
-                  >
+                  <Button type="submit" design="self-center">
                     Submit
                   </Button>
                 )}
