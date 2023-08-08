@@ -9,7 +9,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import stylesheet from '~/tailwind.css';
-
+import img from './images/ogImageC.png';
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
 ];
@@ -20,6 +20,9 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta property="og:image" content={img} />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:image" content={img} />
         <meta name="robots" content="index, follow" />
         <Meta />
         <Links />

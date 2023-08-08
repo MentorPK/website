@@ -116,8 +116,16 @@ const useScrollProgress = () => {
 //TODO: Indicator appears twice on main route, on the top behinde the header and under the header, needs to be solved more beatiful
 export const Indicator = () => {
   const scrollProgress = useScrollProgress();
-  const width = { width: `${scrollProgress}%` };
-  return <div className={`h-[2.5px] bg-primary fixed`} style={width} />;
+  const width = {
+    width: `${scrollProgress}%`,
+    transition: 'all 100ms',
+  };
+  return (
+    <div
+      className={`h-[2.5px] bg-primary fixed transition-width ease-in-out duration-200`}
+      style={width}
+    />
+  );
 };
 
 // gradient heaqder color bg-gradient-to-r from-black from-0% via-transparent via-50% to-primary to-100%
