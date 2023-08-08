@@ -89,6 +89,9 @@ const Contact = () => {
             Hey, if you want to get in touch with me just write me a message! I
             will guarantee to get back to you within 48 hours.
           </div>
+          <div className="border-2 border-primary rounded-lg p-4">
+            Vacation: 11.08.2023 - 20.08-2023
+          </div>
           <Form method="post" className="w-full">
             <div className="flex flex-col gap-4">
               <Input

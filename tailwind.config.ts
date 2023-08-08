@@ -34,8 +34,8 @@ export default {
           },
         },
         pop: {
-          '50%': {
-            transform: 'scale(0.5)',
+          '25%': {
+            transform: 'scale(0.7)',
           },
           '75%': {
             transform: 'scale(1.1)',

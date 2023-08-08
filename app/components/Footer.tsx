@@ -72,7 +72,7 @@ const Footer = ({ addStyles }: Footer) => {
           </a>
           <div className="relative">
             {discord && (
-              <div className="w-[200px] h-max border-2 p-4 rounded bg-richBlack bg-opacity-90 bottom-[60px] xs:left-[-80px] left-[-130px] border-primary absolute text-slate-300 z-50 animate-[pop_0.5s_ease-in-out]">
+              <div className="w-[200px] h-max border-2 p-4 rounded bg-richBlack bg-opacity-90 bottom-[60px] xs:left-[-80px] left-[-130px] border-primary absolute text-slate-300 z-50">
                 Hey, my Discord ID was copied to your clipboard!
               </div>
             )}
