@@ -11,7 +11,7 @@ import Tech from '~/components/Tech';
 export const meta: V2_MetaFunction = () => {
   return [
     {
-      title: 'webpaw solutions | pawsome apps for your success',
+      title: 'webpaw solutions - pawsome apps for your success',
     },
     {
       name: 'description',
