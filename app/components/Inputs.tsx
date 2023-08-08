@@ -9,7 +9,7 @@ interface InputInterface {
   error?: string;
   defaultValue?: string;
   //only fontawesome types
-  icon: IconDefinition;
+  icon?: IconDefinition;
 }
 
 const Input = ({
@@ -41,10 +41,12 @@ const Input = ({
               placeholder={placeholder}
               defaultValue={defaultValue}
             />
-            <FontAwesomeIcon
-              icon={icon}
-              className="w-6 h-6 text-slate-500 peer-focus:text-primary absolute pr-4 top-0 pt-[10px] right-0 align-center transition-all duration-200 ease-in-out"
-            />
+            {icon && (
+              <FontAwesomeIcon
+                icon={icon}
+                className="w-6 h-6 text-slate-500 peer-focus:text-primary absolute pr-4 top-0 pt-[10px] right-0 align-center transition-all duration-200 ease-in-out"
+              />
+            )}
           </div>
         ) : (
           <textarea
