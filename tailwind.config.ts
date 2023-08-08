@@ -38,7 +38,7 @@ export default {
             transform: 'scale(0.7)',
           },
           '75%': {
-            transform: 'scale(1.3)',
+            transform: 'scale(1.1)',
           },
         },
         shake: {
@@ -46,16 +46,25 @@ export default {
             transform: 'scale3d(1, 1, 1)',
           },
           '10%, 20%': {
-            transform: 'scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg)',
+            transform: 'scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -2deg)',
           },
           '30%, 50%, 70%, 90%': {
-            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)',
+            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 2deg)',
           },
           '40%, 60%, 80%': {
-            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)',
+            transform: 'scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -2deg)',
           },
           '100%': {
             transform: 'scale3d(1, 1, 1)',
+          },
+        },
+        'zoom-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale3d(0.3, 0.3, 0.3)',
+          },
+          '50%': {
+            opacity: '1',
           },
         },
       },
