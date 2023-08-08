@@ -1,3 +1,6 @@
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 interface InputInterface {
   name: string;
   type: string;
@@ -5,6 +8,8 @@ interface InputInterface {
   placeholder?: string;
   error?: string;
   defaultValue?: string;
+  //only fontawesome types
+  icon: IconDefinition;
 }
 
 const Input = ({
@@ -14,6 +19,7 @@ const Input = ({
   placeholder,
   error,
   defaultValue,
+  icon,
 }: InputInterface) => {
   return (
     <div>
@@ -24,16 +30,22 @@ const Input = ({
       </label>
       <div>
         {type === 'text' ? (
-          <input
-            name={name}
-            className={`bg-slate-700 border text-slate-200  ${
-              error
-                ? 'border-errorRed focus:ring-errorRed'
-                : 'border-slate-500 focus:ring-primary focus:border-primary hover:border-primary'
-            } w-full rounded-lg p-2.5 transition-all duration-200 ease-in-out focus:ring-1 outline-none block `}
-            placeholder={placeholder}
-            defaultValue={defaultValue}
-          />
+          <div className="relative">
+            <input
+              name={name}
+              className={`bg-slate-700 border text-slate-200 peer ${
+                error
+                  ? 'border-errorRed focus:ring-errorRed'
+                  : 'border-slate-500 focus:ring-primary focus:border-primary hover:border-primary'
+              } w-full rounded-lg p-2.5 pr-12 transition-all duration-200 ease-in-out focus:ring-1 outline-none block `}
+              placeholder={placeholder}
+              defaultValue={defaultValue}
+            />
+            <FontAwesomeIcon
+              icon={icon}
+              className="w-6 h-6 text-slate-500 peer-focus:text-primary absolute pr-4 top-0 pt-[10px] right-0 align-center transition-all duration-200 ease-in-out"
+            />
+          </div>
         ) : (
           <textarea
             name="message"

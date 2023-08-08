@@ -10,6 +10,11 @@ import {
   faCircleCheck,
   faFaceSadCry,
 } from '@fortawesome/free-regular-svg-icons';
+import {
+  faUser,
+  faEnvelope,
+  faCircleInfo,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
 import Loader from '~/components/Loader';
@@ -89,8 +94,12 @@ const Contact = () => {
             Hey, if you want to get in touch with me just write me a message! I
             will guarantee to get back to you within 48 hours.
           </div>
-          <div className="border-2 border-primary rounded-lg p-4">
-            Vacation: 11.08.2023 - 20.08-2023
+          <div className="border-2 border-primary rounded-lg p-4 flex flex-row">
+            <FontAwesomeIcon
+              icon={faCircleInfo}
+              className="w-6 h-6 mr-4 text-primary"
+            />{' '}
+            Vacation: 11.08.2023 - 20.08.2023
           </div>
           <Form method="post" className="w-full">
             <div className="flex flex-col gap-4">
@@ -101,6 +110,7 @@ const Contact = () => {
                 placeholder="John Wick"
                 error={actionData?.errors?.name}
                 defaultValue={actionData?.fields?.name}
+                icon={faUser}
               />
               <Input
                 name="email"
@@ -109,6 +119,7 @@ const Contact = () => {
                 placeholder="john.wick@continental.com"
                 error={actionData?.errors?.email}
                 defaultValue={actionData?.fields?.email}
+                icon={faEnvelope}
               />
               <Input
                 name="message"
