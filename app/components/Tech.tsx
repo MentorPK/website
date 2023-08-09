@@ -41,7 +41,7 @@ const Tech = () => {
     'LESS/SASS',
     'Webpack',
     'Vite',
-    'SQL',
+    'SQLite',
     'Firebase',
     'Java (Basics)',
   ];
