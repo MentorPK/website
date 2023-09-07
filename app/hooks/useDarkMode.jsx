@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
-
+//TODI implement darkMode /dimMode switch
 const useDarkMode = () => {
   const [enabled, setEnabled] = useLocalStorage('dark-theme');
   const isEnabled = typeof enabledState === 'undefined' && enabled;
