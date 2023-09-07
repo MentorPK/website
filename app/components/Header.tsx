@@ -5,8 +5,9 @@ import solutionsFont from '../images/solutionsFont.png';
 import type FancyPantsyMenuButton from './FancyPantsyMenuButton';
 import useScrollPosition from '~/hooks/useScrollPosition';
 import { useEffect, useState } from 'react';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Toggle from './Toggle';
 
 interface MenuButton {
   pos: number;
@@ -39,9 +40,7 @@ const MenuButton = ({
           onClick={() => setClicked(!clicked)}
           disabled={!active}
           aria-label="Open menu button"
-        >
-          <FontAwesomeIcon icon={faBars} className="w-10 h-10 text-white" />
-        </button>
+        ></button>
       ) : (
         <button
           onClick={() => setClicked(!clicked)}
@@ -165,7 +164,9 @@ const Header = ({ bPos = 0 }: HeaderInterface) => {
               </div>
             </div>
           </Link>
-          <HeaderMenuItems />
+          <div className="flex gap-20">
+            <HeaderMenuItems />
+          </div>
         </div>
         <Indicator />
       </div>
