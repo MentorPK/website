@@ -22,13 +22,13 @@ const About = () => {
     <div className="flex flex-col justify-between min-h-screen bg-secondary">
       <Header />
       <Container>
-        <div className="flex xl:flex-row flex-col gap-4 my-12 mx-2">
+        <div className="flex 2xl:flex-row flex-col gap-4 my-12 mx-2">
           <img
             className="rounded-2xl max-h-[400px] self-center"
             src={pawelImg}
             alt="Pawel Kowalski"
           />
-          <div className="inline-block xl:min-h-[16px] xl:min-w-[2px] min-w-[16px] min-h-[2px] bg-primary my-4 rounded-full" />
+          <div className="inline-block 2xl:min-h-[16px] 2xl:min-w-[2px] min-w-[16px] min-h-[2px] bg-primary my-4 rounded-full" />
           <div>
             <div className="text-xl self-start my-4">About Me</div>
             Hi, I'm Pawel, a passionate Web Application Developer 💻 with Polish
