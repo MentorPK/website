@@ -88,7 +88,9 @@ const Contact = () => {
         <div className="my-12 mx-2 max-w-[600px]">
           <div className="self-start mb-4">
             Hey, if you want to get in touch with me just write me a message! I
-            will guarantee to get back to you within 48 hours.
+            will guarantee to get back to you within 48 hours. Please note that
+            we will only respond to serious project inquiries that have been
+            written in German or English.
           </div>
           <Form method="post" className="w-full">
             <div className="flex flex-col gap-4">
