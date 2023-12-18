@@ -5,9 +5,8 @@ import solutionsFont from '../images/solutionsFont.png';
 import type FancyPantsyMenuButton from './FancyPantsyMenuButton';
 import useScrollPosition from '~/hooks/useScrollPosition';
 import { useEffect, useState } from 'react';
-import { faBars, faXmark, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Toggle from './Toggle';
 
 interface MenuButton {
   pos: number;

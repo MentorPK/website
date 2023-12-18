@@ -66,8 +66,8 @@ export const action = async ({ request }: ActionArgs) => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   try {
     const data = await resend.emails.send({
-      from: `${fields.name} <resend@web-paw.com>`,
-      to: ['pawel@web-paw.com'],
+      from: `${fields.name} <resend@resend.dev>`,
+      to: [`${process.env.MY_EMAIL}`],
       subject: `${fields.email} webpaw solutions contact`,
       html: `<div><div><strong>Contact from: ${fields.email}</strong></div><p>${fields.message}</p></div>`,
     });
