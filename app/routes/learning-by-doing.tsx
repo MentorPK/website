@@ -9,7 +9,7 @@ const LearningByDoing = () => {
       <Header />
       <Container>
         <div className="flex 2xl:flex-row flex-col gap-4 my-12 mx-2">
-          <Highlighter language="ts">const mat = dat</Highlighter>
+          <Highlighter>{'const mat = dat'}</Highlighter>
         </div>
       </Container>
       <Footer />

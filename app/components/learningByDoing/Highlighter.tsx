@@ -1,32 +1,23 @@
-import hljs from 'highlight.js/lib/core';
-import typescript from 'highlight.js/lib/languages/typescript';
-import { useEffect, useState } from 'react';
-import 'highlight.js/styles/monokai.css';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-hljs.registerLanguage('typescript', typescript);
+import { useEffect, useState } from 'react';
 
 type Highlighter = {
-  language: 'ts';
   children: React.ReactNode;
 };
 
-export const useLoaded = () => {
-  let [loaded, setLoaded] = useState(false);
+const Highlighter = ({ children }: Highlighter) => {
+  const [style, setStyle] = useState({});
   useEffect(() => {
-    setLoaded(true);
-  }, []);
-  return loaded;
-};
-
-const Highlighter = ({ language, children }: Highlighter) => {
-  const value = hljs.highlight('tsx', children.toString(), { language }).value;
-
+    import('react-syntax-highlighter/dist/esm/styles/prism/material-dark').then(
+      (mod) => setStyle(mod.default)
+    );
+  });
   return (
     <div className="border-2 p-4 rounded-lg">
-      <pre
-        className="hljs language-{language}"
-        dangerouslySetInnerHTML={{ __html: value }}
-      />
+      <SyntaxHighlighter language="javascript" style={style}>
+        {children}
+      </SyntaxHighlighter>
     </div>
   );
 };
