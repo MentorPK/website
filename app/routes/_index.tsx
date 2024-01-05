@@ -25,7 +25,7 @@ export default function Index() {
   const [bannerPosition, setBannerPosition] = useState(350);
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const scroll = ref.current.offsetTop;
+    const scroll = ref?.current?.offsetTop;
     setBannerPosition(scroll);
   }, [bannerPosition]);
   return (
