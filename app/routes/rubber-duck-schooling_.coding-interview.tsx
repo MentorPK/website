@@ -2,6 +2,7 @@ import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
 import Highlighter from '~/components/learningByDoing/Highlighter';
+import HighlighterTabs from '~/components/learningByDoing/HighlighterTabs';
 
 const priceFunction = `const prices = (kWh) => {  
   const generateRandomNumber = () => Math.round((Math.random() + 0.1) * kWh)
@@ -12,11 +13,18 @@ const priceFunction = `const prices = (kWh) => {
 
 const kwhArray = `const kWh = [1000, 2000, 3000, 4000, 5000];`;
 
-const calculateLowest1 = `const calculateLowest = (kWhArr) => {
+const calculateLowestForEach = `const calculateLowest = (kWhArr) => {
   let calculatePrices = [];
   kWhArr.forEach((item) => {
     const price = prices(item);
     calculatePrices = [...calculatePrices, price];
+  });
+  return calculatePrices;
+};`;
+
+const calculateLowestMap = `const calculateLowest = (kWhArr) => {
+  const calculatePrices = kWhArr.map((item) => {
+    return prices(item);
   });
   return calculatePrices;
 };`;
@@ -49,7 +57,7 @@ const returnCalcualteLowest1 = `[
   ]
 ]`;
 
-const calculateLowest2 = `const calculateLowest = (kwhArr) => {
+const calculateLowest3 = `const calculateLowest = (kwhArr) => {
   let lowestItem = {};
   let lowestItemList = []
   
@@ -127,7 +135,10 @@ const CodingInterview = () => {
           declared variable price. Afterwards we pass an array spread
           calculatePrices into it and give it also the price variable. So after
         </div>
-        <Highlighter>{calculateLowest1}</Highlighter>
+        <HighlighterTabs
+          tabs={[calculateLowestForEach, calculateLowestMap]}
+          names={['forEach()', 'map()']}
+        />{' '}
         <div>If we log the newCalculation we will get:</div>
         <Highlighter>{returnCalcualteLowest1}</Highlighter>
         <div>
@@ -136,7 +147,7 @@ const CodingInterview = () => {
           of the inner list. So what do we have here. A function calculateLowest
           that takes one argument kWhArr
         </div>
-        <Highlighter>{calculateLowest2}</Highlighter>
+        <Highlighter>{calculateLowest3}</Highlighter>
       </Container>
       <Footer />
     </div>

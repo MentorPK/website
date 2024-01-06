@@ -14,7 +14,7 @@ const Highlighter = ({ children }: Highlighter) => {
     );
   });
   return (
-    <div className="p-4 rounded">
+    <div className="p-2">
       <SyntaxHighlighter language="javascript" style={style}>
         {children}
       </SyntaxHighlighter>
