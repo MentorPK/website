@@ -22,11 +22,23 @@ const calculateLowestForEach = `const calculateLowest = (kWhArr) => {
   return calculatePrices;
 };`;
 
-const calculateLowestMap = `const calculateLowest = (kWhArr) => {
-  const calculatePrices = kWhArr.map((item) => {
-    return prices(item);
+const calculateLowestForEachComments = `const calculateLowest = (kWhArr) => {
+  //declare a variable and initialise it with an empty array
+  let calculatePrices = [];
+  kWhArr.forEach((item) => {
+    const price = prices(item);
+    //overwrite it and spread the items of the array into it and add the current looped item to it
+    //after each loop you will have somehting like [item1], [item1, item2] etc.
+    //forEach returns undefined so we need to save it in a variable outside the loop
+    calculatePrices = [...calculatePrices, price];
   });
   return calculatePrices;
+};`;
+
+const calculateLowestMap = `const calculateLowest = (kWhArr) => {
+  return kWhArr.map((item) => {
+    return prices(item);
+  });
 };`;
 
 const returnCalcualteLowest1 = `[
@@ -130,16 +142,17 @@ const CodingInterview = () => {
           loop through the kWh Array and pass each item to the price function.
           For this I took the forEach method, but we could use any other loop
           method. Outside the loop we create a variable to save the calculated
-          result for each passed kWh item. In this case we name it
-          calculatePrices. We save the calculate price per kWh inside our new
-          declared variable price. Afterwards we pass an array spread
-          calculatePrices into it and give it also the price variable. So after
+          result for each passed kWh item.
         </div>
         <HighlighterTabs
-          tabs={[calculateLowestForEach, calculateLowestMap]}
-          names={['forEach()', 'map()']}
+          tabs={[
+            calculateLowestForEach,
+            calculateLowestForEachComments,
+            calculateLowestMap,
+          ]}
+          names={['forEach()', 'forEach() + c', 'map()']}
         />{' '}
-        <div>If we log the newCalculation we will get:</div>
+        <div>The result will look like this:</div>
         <Highlighter>{returnCalcualteLowest1}</Highlighter>
         <div>
           So far so good. Now we have the value we want and we can iterate
