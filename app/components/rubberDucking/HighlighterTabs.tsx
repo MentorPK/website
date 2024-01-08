@@ -9,8 +9,8 @@ type Tabs = {
 };
 const Tabs = ({ names, onClick, activeTab }: Tabs) => {
   return (
-    <div className="w-2/4">
-      <div className="flex gap-2 justify-center">
+    <div className="mb-[-8px] w-[400px]">
+      <div className="flex gap-1 justify-center">
         {names.map((item, idx) => (
           <button
             key={idx}

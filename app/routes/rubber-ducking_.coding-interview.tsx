@@ -1,8 +1,8 @@
 import Container from '~/components/Container';
 import Footer from '~/components/Footer';
 import Header from '~/components/Header';
-import Highlighter from '~/components/learningByDoing/Highlighter';
-import HighlighterTabs from '~/components/learningByDoing/HighlighterTabs';
+import Highlighter from '~/components/rubberDucking/Highlighter';
+import HighlighterTabs from '~/components/rubberDucking/HighlighterTabs';
 
 const priceFunction = `const prices = (kWh) => {  
   const generateRandomNumber = () => Math.round((Math.random() + 0.1) * kWh)
