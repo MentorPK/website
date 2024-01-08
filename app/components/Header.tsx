@@ -170,7 +170,7 @@ const Header = ({ bPos = 0 }: HeaderInterface) => {
             <HeaderMenuItems />
           </div>
         </div>
-        <Indicator matchRoot={matchRoot} />
+        <Indicator />
       </div>
       {/*       {matchRoot && (
         <FancyPantsyMenuButton
