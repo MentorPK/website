@@ -4,7 +4,7 @@ interface ButtonInterface {
   type?: 'submit' | 'reset' | 'button';
   children: ReactNode;
   fullWidth?: boolean;
-  design: string;
+  design?: string;
   disabled?: boolean;
   onClick?: () => void;
 }
