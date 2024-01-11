@@ -89,14 +89,14 @@ const Tech = () => {
               icon={faCubes}
               list={libList}
               animation="zoomIn"
-              delay={200}
+              delay={100}
             />
             <TechBox
               title="Daily use"
               icon={faCalendar}
               list={dailyList}
               animation="fadeInRight"
-              delay={400}
+              delay={200}
             />
           </div>
         </div>
