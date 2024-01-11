@@ -11,7 +11,7 @@ const Intro = () => {
   return (
     <div style={introStyles} className="bg-secondary">
       <Container>
-        <Animate animation="fadeIn" style={{ animationDuration: '3000ms' }}>
+        <Animate animation="fadeIn" style={{ animationDuration: '2500ms' }}>
           <div className="text-2xl p-4 my-24 mx-2 italic text-center">
             Greetings traveler! Welcome to "webpaw solutions". We are all about
             creating web applications and websites for your personal needs.

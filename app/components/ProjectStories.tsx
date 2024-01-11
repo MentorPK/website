@@ -4,6 +4,7 @@ import xrplAgencyLogo from '../images/xrplAgencyLogo.png';
 import Container from './Container';
 import { Link } from '@remix-run/react';
 import Divider from './Divider';
+import Animate from './Animate';
 
 //Images should be 640:360
 
@@ -18,27 +19,43 @@ const PSBox = ({ company, year, logo, text, id }: PSBox) => {
   return (
     <div className="shadow-box flex flex-col xs:py-8 py-4 xs:px-8 px-4 overflow-hidden text-ellipsis bg-secondary rounded-2xl">
       <div className="flex flex-row justify-between items-center">
-        <h2 className="text-4xl break-all">{company}</h2>
-        <div className="text-xl">{year}</div>
+        <Animate animation="fadeInDown">
+          <h2 className="text-4xl break-all">{company}</h2>
+        </Animate>
+        <Animate animation="fadeInRight">
+          <div className="text-xl">{year}</div>
+        </Animate>
       </div>
-      <Divider />
-      <div className="grid flex-row gap-8 pt-4 2xl:grid-cols-2">
-        <Link to={`/projects#${id}`}>
-          <img
-            src={logo}
-            className="rounded-xl border-primary border-1"
-            alt={`${company}-img`}
-          />
-        </Link>
-        <div className="text-xl">
-          <div dangerouslySetInnerHTML={{ __html: text }} />
-          <Link
-            to={`/projects#${id}`}
-            className="link text-primary text-center"
-          >
-            ... read full story
-          </Link>
+      <Animate animation="fadeInLeft" delay={100}>
+        <div>
+          <Divider />
         </div>
+      </Animate>
+      <div className="grid flex-row gap-8 pt-4 2xl:grid-cols-2">
+        <Animate animation="fadeInUp" delay={200}>
+          <Link to={`/projects#${id}`}>
+            <img
+              src={logo}
+              className="rounded-xl border-primary border-1"
+              alt={`${company}-img`}
+            />
+          </Link>
+        </Animate>
+        <Animate
+          animation="fadeIn"
+          delay={200}
+          style={{ animationDuration: '2000ms' }}
+        >
+          <div className="text-xl">
+            <div dangerouslySetInnerHTML={{ __html: text }} />
+            <Link
+              to={`/projects#${id}`}
+              className="link text-primary text-center"
+            >
+              ... read full story
+            </Link>
+          </div>
+        </Animate>
       </div>
     </div>
   );
