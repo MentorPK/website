@@ -7,6 +7,7 @@ import useScrollPosition from '~/hooks/useScrollPosition';
 import { useEffect, useState } from 'react';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Animate from './Animate';
 
 interface MenuButton {
   pos: number;
@@ -61,15 +62,21 @@ export const HeaderMenuItems = ({ addStyles }: HeaderMenuItems) => {
     <div
       className={`flex justify-end lg:gap-10 md:gap-4 sm:gap-4 gap-2 ${addStyles}`}
     >
-      <Link className="headerMenuItem" to="/about">
-        About
-      </Link>
-      <Link className="headerMenuItem" to="/projects">
-        Projects
-      </Link>
-      <Link className="headerMenuItem" to="/contact">
-        Contact
-      </Link>
+      <Animate animation="fadeInDown">
+        <Link className="headerMenuItem" to="/about">
+          About
+        </Link>
+      </Animate>
+      <Animate animation="fadeInDown" delay={100}>
+        <Link className="headerMenuItem" to="/projects">
+          Projects
+        </Link>
+      </Animate>
+      <Animate animation="fadeInDown" delay={200}>
+        <Link className="headerMenuItem" to="/contact">
+          Contact
+        </Link>
+      </Animate>
     </div>
   );
 };

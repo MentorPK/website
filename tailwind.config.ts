@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss';
 
 export default {
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
+
   theme: {
     extend: {
       transitionProperty: {
@@ -68,13 +69,6 @@ export default {
           },
         },
       },
-    },
-    //TODO: fix
-    animationDelay: {
-      'animate-delay-0': '0s',
-      'animate-delay-100': '100ms',
-      'animate-delay-200': '200ms',
-      'animate-delay-300': '300ms',
     },
     container: {
       center: true,
