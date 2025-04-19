@@ -14,6 +14,7 @@ import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Header from '~/components/Header';
 import Loader from '~/components/Loader';
+import MyCaptcha from '~/components/MyCaptcha';
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -127,6 +128,7 @@ const Contact = () => {
                 </Link>{' '}
                 guidelines.
               </div>
+              <MyCaptcha />
               <div className="flex justify-center items-center gap-4">
                 {!actionData?.id && submit.state !== 'submitting' && (
                   <Button type="submit" design="self-center">
