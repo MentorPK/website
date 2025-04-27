@@ -4,18 +4,18 @@ interface ButtonInterface {
   type?: 'submit' | 'reset' | 'button';
   children: ReactNode;
   fullWidth?: boolean;
-  design: string;
+  design?: string;
   disabled?: boolean;
   onClick?: () => void;
 }
 
 const Button = ({
-  type,
+  type = 'button',
   fullWidth,
   children,
-  design,
+  design = '',
   disabled = false,
-  onClick,
+  onClick
 }: ButtonInterface) => {
   return (
     <button
@@ -27,7 +27,7 @@ const Button = ({
           : 'text-primary hover:bg-primary hover:text-secondary bg-secondary  border-primary'
       } ${
         fullWidth ? 'w-full' : 'w-28'
-      } min-w-min transitio-all duration-200 ease-in-out ${design}`}
+      } min-w-min transition-all duration-200 ease-in-out ${design}`}
       onClick={onClick}
     >
       {children}
