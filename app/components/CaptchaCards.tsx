@@ -17,6 +17,7 @@ const CaptchaCards = ({ captchaNumbers }: CaptchaViewProps) => {
       {captchaNumbers.map((number, idx) => (
         <motion.div
           onMouseDown={() => renderNumber(idx)}
+          onTouchStart={() => renderNumber(idx)}
           key={idx}
           whileTap="rotate"
           transition={{ duration: 0.3, ease: 'easeInOut' }}
