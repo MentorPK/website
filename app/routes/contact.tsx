@@ -51,6 +51,8 @@ const validateMessage = (message: string) => {
     return 'Message must be at least 10 characters long';
   }
 };
+
+//TODO move captcha validation tor form validation
 export const action = async ({ request }: ActionArgs) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
   const fields = Object.fromEntries(new URLSearchParams(await request.text()));
@@ -80,6 +82,7 @@ const Contact = () => {
   const actionData = useActionData();
   const submit = useNavigation();
   const [disabled, setDisabled] = useState(true);
+  const [captchaWasGenerated, setCaptchaWasGenerated] = useState(false);
 
   const validateCaptcha = (captcha: number, captchaInput: number) => {
     if (captcha !== captchaInput) {
@@ -127,6 +130,11 @@ const Contact = () => {
                 error={actionData?.errors?.message}
                 defaultValue={actionData?.fields?.message}
               />
+              <MyCaptcha
+                validateCaptcha={validateCaptcha}
+                setWasGenerated={setCaptchaWasGenerated}
+                wasGenerated={captchaWasGenerated}
+              />
               <div>
                 Here you can find infomations about our{' '}
                 <Link to="/privacy-policy" className="link text-primary">
@@ -134,7 +142,6 @@ const Contact = () => {
                 </Link>{' '}
                 guidelines.
               </div>
-              <MyCaptcha validateCaptcha={validateCaptcha} />
               <div className="flex justify-center items-center gap-4">
                 {!actionData?.id && submit.state !== 'submitting' && (
                   <Button type="submit" design="self-center" disabled={disabled}>

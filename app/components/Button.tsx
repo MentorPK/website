@@ -9,7 +9,14 @@ interface ButtonInterface {
   onClick?: () => void;
 }
 
-const Button = ({ type, fullWidth, children, design, disabled = false, onClick }: ButtonInterface) => {
+const Button = ({
+  type = 'button',
+  fullWidth,
+  children,
+  design = '',
+  disabled = false,
+  onClick
+}: ButtonInterface) => {
   return (
     <button
       type={type}
@@ -18,7 +25,9 @@ const Button = ({ type, fullWidth, children, design, disabled = false, onClick }
         disabled
           ? 'bg-slate-500 border-slate-500'
           : 'text-primary hover:bg-primary hover:text-secondary bg-secondary  border-primary'
-      } ${fullWidth ? 'w-full' : 'w-28'} min-w-min transitio-all duration-200 ease-in-out ${design}`}
+      } ${
+        fullWidth ? 'w-full' : 'w-28'
+      } min-w-min transition-all duration-200 ease-in-out ${design}`}
       onClick={onClick}
     >
       {children}
