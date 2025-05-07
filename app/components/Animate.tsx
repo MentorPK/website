@@ -7,14 +7,14 @@ import {
 } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-type Animate = {
+type AnimateProps = {
   animation?: string;
   children: ReactNode;
   delay?: number;
   style?: CSSProperties;
 };
 
-const Animate = ({ children, animation, delay = 0, style }: Animate) => {
+const Animate = ({ children, animation, delay = 0, style }: AnimateProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0,
@@ -23,6 +23,7 @@ const Animate = ({ children, animation, delay = 0, style }: Animate) => {
     console.error('Only one child is allowed!!!');
     return null;
   }
+
   return Children.map(children, (child) => {
     if (isValidElement(child)) {
       return cloneElement(child, {
